@@ -1,19 +1,21 @@
 import React from "react";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addPage } from "../redux/addPageSlice";
 
 function AddPage() {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [link, setLink] = useState("");
   const [name, setName] = useState("");
-
+  const dispatch = useDispatch();
   return (
     <div class="block p-6 rounded-lg shadow-lg bg-white max-w-md">
       <form>
         <div class="form-group mb-6">
           <input
             type="text"
-            class="form-control block
+            class="
         w-full
         px-3
         py-1.5
@@ -27,15 +29,19 @@ function AddPage() {
         ease-in-out
         m-0
         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-            onChange={(e) => setName(e.target.value)}
+            onKeyUp={(e) => {
+              setName(e.target.value);
+              setLink(e.target.value);
+              console.log("naber" + name);
+            }}
             id="exampleInput7"
-            placeholder="Nav Title"
+            //placeholder="Nav Title"
           />
         </div>
         <div class="form-group mb-6">
           <input
             type="text"
-            class="form-control block
+            class="
         w-full
         px-3
         py-1.5
@@ -49,7 +55,7 @@ function AddPage() {
         ease-in-out
         m-0
         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-            onChange={(e) => setTitle(e.target.value)}
+            onKeyUp={(e) => setTitle(e.target.value)}
             id="exampleInput8"
             placeholder="Title"
           />
@@ -57,7 +63,7 @@ function AddPage() {
         <div class="form-group mb-6">
           <textarea
             class="
-        form-control
+        
         block
         w-full
         px-3
@@ -73,15 +79,16 @@ function AddPage() {
         m-0
         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
       "
-            onChange={(e) => setContent(e.target.value)}
+            onKeyUp={(e) => setContent(e.target.value)}
             id="exampleFormControlTextarea13"
             rows="3"
             placeholder="Content"
           ></textarea>
         </div>
         <button
-          type="submit"
+          type="button"
           class="
+          button
       w-full
       px-6
       py-2.5
@@ -99,6 +106,10 @@ function AddPage() {
       transition
       duration-150
       ease-in-out"
+          onClick={() => {
+            dispatch(addPage(name, title, content, link));
+            console.log("naber" + name);
+          }}
         >
           Send
         </button>

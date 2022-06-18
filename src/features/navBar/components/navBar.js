@@ -1,10 +1,9 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { addSection } from "../redux/sectionsSlice";
+import { useSelector } from "react-redux";
 
 function NAvbar() {
-  const navBarİtems = useSelector((state) => state.sections);
-  const dispatch = useDispatch();
+  const navBarİtems = useSelector((state) => state.addPage);
+
   return (
     <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
       <div class="container flex flex-wrap justify-between items-center mx-auto">
@@ -63,17 +62,6 @@ function NAvbar() {
                 </a>
               </li>
             ))}
-            ,
-            <li>
-              <button
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                onClick={() =>
-                  dispatch(addSection({ name: "naber", link: "naber" }))
-                }
-              >
-                Ekle
-              </button>
-            </li>
           </ul>
         </div>
       </div>
