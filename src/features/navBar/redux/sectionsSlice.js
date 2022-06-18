@@ -2,7 +2,11 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const sectionsSlice = createSlice({
   name: "sections",
-  initialState: ["home", "about", "contact"],
+  initialState: [
+    { name: "Home", link: "home" },
+    { name: "About", link: "about" },
+    { name: "Contact", link: "contact" },
+  ],
   reducers: {
     addSection: (state, action) => {
       return [...state, action.payload];
