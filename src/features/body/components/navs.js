@@ -1,13 +1,17 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Counter from "./counter.js";
+import { useSelector } from "react-redux";
+import Content from "./content.js";
+import AddPage from "../../adminPanel/components/addPage";
 
 function Navs() {
+  const pages = useSelector((state) => state.addPage);
   return (
     <Routes>
-      <Route path="/home" exact component={Counter} />
-      <Route path="/about" exact component={Counter} />
-      <Route path="/contact" exact component={Counter} />
+      {pages.map((page) => (
+        <Route path={"/" + page.link} element={<Content page={page} />} />
+      ))}
+      <Route path="/ekle" element={<AddPage />} />
     </Routes>
   );
 }
