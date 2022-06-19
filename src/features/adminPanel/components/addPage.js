@@ -107,7 +107,7 @@ function AddPage() {
       duration-150
       ease-in-out"
           onClick={() => {
-            dispatch(addPage(name, title, content, link));
+            dispatch(addPage({ name, title, content, link }));
             console.log("naber" + name);
           }}
         >
