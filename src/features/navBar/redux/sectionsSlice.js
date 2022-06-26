@@ -4,7 +4,8 @@ const sectionsSlice = createSlice({
   name: "sections",
   initialState: [
     { name: "Home", link: "home" },
-    { name: "About", link: "about" },
+    { name: "About Gorup", link: "aboutGroup" },
+    { name: "About Us", link: "about" },
     { name: "Contact", link: "contact" },
   ],
   reducers: {

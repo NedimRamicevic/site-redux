@@ -54,13 +54,17 @@ function NAvbar() {
         <div class="hidden w-full md:block md:w-auto" id="mobile-menu">
           <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
             {navBarİtems.map((item) => (
-              <Link to={"/" + item.link}>
-                <li>{item.name}</li>
-              </Link>
+              <div class=" text-cyan-500">
+                <Link to={"/" + item.link}>
+                  <li>{item.name}</li>
+                </Link>
+              </div>
             ))}
-            <Link to="/ekle">
-              <li>Ekle</li>
-            </Link>
+            <div class="text-cyan-500">
+              <Link to="/ekle">
+                <li>Ekle</li>
+              </Link>
+            </div>
           </ul>
         </div>
       </div>
