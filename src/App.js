@@ -6,7 +6,7 @@ import Navs from "./features/body/components/navs";
 function App() {
   return (
     <BrowserRouter>
-      <div className="App  ">
+      <div className="App h-full">
         <NavBar />
         <Navs />
       </div>
