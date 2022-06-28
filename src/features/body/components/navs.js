@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import { useSelector } from "react-redux";
 import Content from "./content.js";
 import AddPage from "../../adminPanel/components/addPage";
+import AddComponent from "../../adminPanel/components/addComponent.js";
 
 function Navs() {
   const pages = useSelector((state) => state.addPage);
@@ -12,6 +13,7 @@ function Navs() {
         <Route path={"/" + page.link} element={<Content page={page} />} />
       ))}
       <Route path="/ekle" element={<AddPage />} />
+      <Route path="/ekleComponent" element={<AddComponent />} />
     </Routes>
   );
 }

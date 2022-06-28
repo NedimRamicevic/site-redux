@@ -2,13 +2,14 @@
 import React from "react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addComponent } from "../redux/addComponentSlice";
+import { addComponent } from "../redux/addPageSlice";
 
 function AddComponent() {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
-  const [link, setLink] = useState("");
+  const [page, setPage] = useState("");
   const [name, setName] = useState("");
+  const [image, setImage] = useState("");
   const dispatch = useDispatch();
   return (
     <div class="block p-6 rounded-lg shadow-lg bg-white max-w-md">
@@ -32,11 +33,11 @@ function AddComponent() {
         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
             onKeyUp={(e) => {
               setName(e.target.value);
-              setLink(e.target.value);
+              setPage(e.target.value);
               console.log("naber" + name);
             }}
             id="exampleInput7"
-            //placeholder="Nav Title"
+            placeholder="Page"
           />
         </div>
         <div class="form-group mb-6">
@@ -59,6 +60,30 @@ function AddComponent() {
             onKeyUp={(e) => setTitle(e.target.value)}
             id="exampleInput8"
             placeholder="Title"
+          />
+        </div>
+        <div class="form-group mb-6">
+          <input
+            type="text"
+            class="
+        w-full
+        px-3
+        py-1.5
+        text-base
+        font-normal
+        text-gray-700
+        bg-white bg-clip-padding
+        border border-solid border-gray-300
+        rounded
+        transition
+        ease-in-out
+        m-0
+        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+            onKeyUp={(e) => {
+              setImage(e.target.value);
+            }}
+            id="exampleInput7"
+            placeholder="Image"
           />
         </div>
         <div class="form-group mb-6">
@@ -108,7 +133,7 @@ function AddComponent() {
       duration-150
       ease-in-out"
           onClick={() => {
-            dispatch(addComponent({ name, title, content, link }));
+            dispatch(addComponent({ name, title, content, page, image }));
             console.log("naber" + name);
           }}
         >
