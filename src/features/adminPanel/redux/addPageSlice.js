@@ -53,7 +53,7 @@ const addPageSlice = createSlice({
         if (page.name === action.payload.page) {
           page.content.push({
             title: action.payload.title,
-            img: "https://d1bv4heaa2n05k.cloudfront.net/user-images/1575276533261/shutterstock-1108220324_main_1575276597794.jpeg",
+            img: action.payload.image,
             content: action.payload.content,
           });
         }
