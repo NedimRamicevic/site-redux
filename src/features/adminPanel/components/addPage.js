@@ -9,7 +9,7 @@ function AddPage() {
   const [name, setName] = useState("");
   const dispatch = useDispatch();
   return (
-    <div class="block p-6 rounded-lg shadow-lg bg-white max-w-xs">
+    <div class="block p-6 rounded-lg shadow-lg bg-white w-1/2 mx-auto">
       <div className="text-center pb-6">
         <h1>Add Page </h1>
       </div>

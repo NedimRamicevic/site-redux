@@ -22,7 +22,7 @@ function AddComponent() {
   };
 
   return (
-    <div class="block p-6 rounded-lg shadow-lg bg-white max-w-md">
+    <div class="block p-6 rounded-lg shadow-lg bg-white w-1/2 mx-auto">
       <div className="text-center pb-6">
         <h1>Add Component </h1>
       </div>
