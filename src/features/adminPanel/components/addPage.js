@@ -5,7 +5,6 @@ import { addPage } from "../redux/addPageSlice";
 
 function AddPage() {
   const [title, setTitle] = useState("");
-  const [content, setContent] = useState("");
   const [link, setLink] = useState("");
   const [name, setName] = useState("");
   const dispatch = useDispatch();
@@ -32,10 +31,9 @@ function AddPage() {
             onKeyUp={(e) => {
               setName(e.target.value);
               setLink(e.target.value);
-              console.log("naber" + name);
             }}
             id="exampleInput7"
-            //placeholder="Nav Title"
+            placeholder="Nav Title"
           />
         </div>
         <div class="form-group mb-6">
@@ -60,31 +58,6 @@ function AddPage() {
             placeholder="Title"
           />
         </div>
-        <div class="form-group mb-6">
-          <textarea
-            class="
-        
-        block
-        w-full
-        px-3
-        py-1.5
-        text-base
-        font-normal
-        text-gray-700
-        bg-white bg-clip-padding
-        border border-solid border-gray-300
-        rounded
-        transition
-        ease-in-out
-        m-0
-        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
-      "
-            onKeyUp={(e) => setContent(e.target.value)}
-            id="exampleFormControlTextarea13"
-            rows="3"
-            placeholder="Content"
-          ></textarea>
-        </div>
         <button
           type="button"
           class="
@@ -107,7 +80,7 @@ function AddPage() {
       duration-150
       ease-in-out"
           onClick={() => {
-            dispatch(addPage({ name, title, content, link }));
+            dispatch(addPage({ name, title, link }));
             console.log("naber" + name);
           }}
         >

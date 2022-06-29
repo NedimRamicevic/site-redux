@@ -46,7 +46,15 @@ const addPageSlice = createSlice({
   initialState: initialState,
   reducers: {
     addPage: (state, action) => {
-      return [...state, action.payload];
+      return [
+        ...state,
+        {
+          name: action.payload.name,
+          title: action.payload.title,
+          content: [],
+          link: action.payload.link,
+        },
+      ];
     },
     addComponent: (state, action) => {
       state = state.map((page) => {

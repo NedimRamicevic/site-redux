@@ -3,6 +3,7 @@ import React from "react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addComponent } from "../redux/addPageSlice";
+import { useSelector } from "react-redux";
 
 function AddComponent() {
   const [title, setTitle] = useState("");
@@ -11,34 +12,22 @@ function AddComponent() {
   const [name, setName] = useState("");
   const [image, setImage] = useState("");
   const dispatch = useDispatch();
+
+  const options = useSelector((state) => state.addPage);
+
+  const handleChange = (event) => {
+    setPage(event.target.value);
+    setName(event.target.value);
+    console.log(event.target.value);
+  };
+
   return (
     <div class="block p-6 rounded-lg shadow-lg bg-white max-w-md">
       <form>
         <div class="form-group mb-6">
-          <input
-            type="text"
-            class="
-        w-full
-        px-3
-        py-1.5
-        text-base
-        font-normal
-        text-gray-700
-        bg-white bg-clip-padding
-        border border-solid border-gray-300
-        rounded
-        transition
-        ease-in-out
-        m-0
-        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-            onKeyUp={(e) => {
-              setName(e.target.value);
-              setPage(e.target.value);
-              console.log("naber" + name);
-            }}
-            id="exampleInput7"
-            placeholder="Page"
-          />
+          <div>
+            <Dropdown options={options} value={page} onChange={handleChange} />
+          </div>
         </div>
         <div class="form-group mb-6">
           <input
@@ -81,6 +70,7 @@ function AddComponent() {
         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
             onKeyUp={(e) => {
               setImage(e.target.value);
+              console.log(e.target.value);
             }}
             id="exampleInput7"
             placeholder="Image"
@@ -143,5 +133,40 @@ function AddComponent() {
     </div>
   );
 }
+const Dropdown = ({ label, value, options, onChange }) => {
+  return (
+    <label>
+      {label}
+      <div
+        class=" block
+        w-full
+        px-3
+        py-1.5
+        text-base
+        font-normal
+        text-gray-700
+        bg-white bg-clip-padding
+        border border-solid border-gray-300
+        rounded
+        transition
+        ease-in-out
+        m-0
+        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+      >
+        <select
+          className="w-full bg-white bg-clip-padding rounded m-0  focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+          transition
+          ease-in-out"
+          value={value}
+          onChange={onChange}
+        >
+          {options.map((option) => (
+            <option value={option.name}>{option.name}</option>
+          ))}
+        </select>
+      </div>
+    </label>
+  );
+};
 
 export default AddComponent;
