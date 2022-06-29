@@ -60,7 +60,11 @@ function Login(props) {
                 data-mdb-ripple="true"
                 data-mdb-ripple-color="light"
                 onClick={() => {
-                  props.login(props.history.push("/admin"));
+                  props.login({
+                    user: "admin",
+                    password: "admin",
+                    callback: () => props.history.push("/home"),
+                  });
                 }}
               >
                 Log in

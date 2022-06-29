@@ -4,12 +4,12 @@ class Auth {
   constructor() {
     this.authenticated = false;
   }
-  login(user, password, callback) {
+  login({ user, password, callback }) {
     if (user === "admin" && password === "admin") {
       this.authenticated = true;
-      callback();
       return true;
     }
+    callback();
     return false;
   }
   logout() {
@@ -20,4 +20,4 @@ class Auth {
   }
 }
 
-export default Auth;
+export default new Auth();

@@ -2,9 +2,9 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { useSelector } from "react-redux";
 import Content from "./content.js";
-import AddPage from "../../adminPanel/components/addPage";
-import AddComponent from "../../adminPanel/components/addComponent.js";
 import Login from "../../authentication/components/login.js";
+import ProtectedRoute from "./protectedRoute.js";
+import AdminPage from "../../adminPanel/components/adminPage.js";
 
 function Navs() {
   const pages = useSelector((state) => state.addPage);
@@ -13,8 +13,9 @@ function Navs() {
       {pages.map((page) => (
         <Route path={"/" + page.link} element={<Content page={page} />} />
       ))}
-      <Route path="/ekle" element={<AddPage />} />
-      <Route path="/ekleComponent" element={<AddComponent />} />
+      <Route path="/ekle" element={<AdminPage />} />
+      {/* <Route path="/ekleComponent" element={<AddComponent />} /> */}
+      {/* <ProtectedRoute path="/ekleComponent" element={<AddComponent />} /> */}
       <Route path="/login" element={<Login />} />
     </Routes>
   );

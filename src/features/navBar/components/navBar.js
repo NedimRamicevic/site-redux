@@ -66,11 +66,6 @@ function NAvbar() {
               </Link>
             </div>
             <div class="text-cyan-500">
-              <Link to="/ekleComponent">
-                <li>Component Ekle</li>
-              </Link>
-            </div>
-            <div class="text-cyan-500">
               <Link to="/login">
                 <li>Login</li>
               </Link>
