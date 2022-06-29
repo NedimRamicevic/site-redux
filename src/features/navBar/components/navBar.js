@@ -70,6 +70,11 @@ function NAvbar() {
                 <li>Component Ekle</li>
               </Link>
             </div>
+            <div class="text-cyan-500">
+              <Link to="/login">
+                <li>Login</li>
+              </Link>
+            </div>
           </ul>
         </div>
       </div>

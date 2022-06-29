@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import Content from "./content.js";
 import AddPage from "../../adminPanel/components/addPage";
 import AddComponent from "../../adminPanel/components/addComponent.js";
+import Login from "../../authentication/components/login.js";
 
 function Navs() {
   const pages = useSelector((state) => state.addPage);
@@ -14,6 +15,7 @@ function Navs() {
       ))}
       <Route path="/ekle" element={<AddPage />} />
       <Route path="/ekleComponent" element={<AddComponent />} />
+      <Route path="/login" element={<Login />} />
     </Routes>
   );
 }
