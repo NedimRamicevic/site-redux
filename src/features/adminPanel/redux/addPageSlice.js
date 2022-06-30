@@ -8,7 +8,7 @@ const initialState = [
         title: "title",
         img: "https://via.placeholder.com/150",
         content:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel tincidunt ex. Aenean feugiat justo ut mi posuere varius. Maecenas nunc est, fringilla id nisl ut, mollis fermentum lacus. Nunc posuere, diam mattis maximus pharetra, ligula elit pulvinar augue, in feugiat sem massa quis dolor. Nam quis diam dui. Integer malesuada condimentum dolor, nec feugiat justo vestibulum at. Nunc sodales nisl eget lacus facilisis suscipit. Fusce quis placerat felis. Cras faucibus accumsan ante ac interdum. In hac habitasse platea dictumst. Nunc et ipsum ut justo rutrum pulvinar. Vivamus eget hendrerit magna. Nunc ut ullamcorper erat.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel tincidunt ex. Aenean feugiat justo ut mi posuere varius. Maecenas nunc est, fringilla id nisl ut, mollis fermentum lacus. Nunc posuere, diam mattis maximus pharetra, ligula elit pulvinar augue, in feugiat sem massa quis dolor.",
       },
     ],
     link: "home",
