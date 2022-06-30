@@ -1,16 +1,13 @@
 // authentication
-
 class Auth {
   constructor() {
     this.authenticated = false;
   }
-  login({ user, password, callback }) {
+  login({ user, password, cb }) {
     if (user === "admin" && password === "admin") {
       this.authenticated = true;
-      return true;
+      cb();
     }
-    callback();
-    return false;
   }
   logout() {
     this.authenticated = false;

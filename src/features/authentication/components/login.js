@@ -1,8 +1,20 @@
 // login page
-
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import auth from "../auth/auth";
 
 function Login(props) {
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+
+  function onChangeName(e) {
+    setName(e.target.value);
+  }
+  function onChangePassword(e) {
+    setPassword(e.target.value);
+  }
+  let navigate = useNavigate();
   return (
     <section class="h-screen">
       <div class="container px-6 py-12 h-full">
@@ -21,7 +33,8 @@ function Login(props) {
                 <input
                   type="text"
                   class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                  placeholder="Email address"
+                  placeholder="Username"
+                  onKeyUp={onChangeName}
                 />
               </div>
 
@@ -30,6 +43,7 @@ function Login(props) {
                 <input
                   type="password"
                   class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                  onKeyUp={onChangePassword}
                   placeholder="Password"
                 />
               </div>
@@ -60,10 +74,10 @@ function Login(props) {
                 data-mdb-ripple="true"
                 data-mdb-ripple-color="light"
                 onClick={() => {
-                  props.login({
-                    user: "admin",
-                    password: "admin",
-                    callback: () => props.history.push("/home"),
+                  auth.login({
+                    user: name,
+                    password: password,
+                    cb: () => navigate("/adminPage"),
                   });
                 }}
               >

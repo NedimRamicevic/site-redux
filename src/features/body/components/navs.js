@@ -13,7 +13,14 @@ function Navs() {
       {pages.map((page) => (
         <Route path={"/" + page.link} element={<Content page={page} />} />
       ))}
-      <Route path="/ekle" element={<AdminPage />} />
+      <Route
+        path="/adminPage"
+        element={
+          <ProtectedRoute>
+            <AdminPage />
+          </ProtectedRoute>
+        }
+      />
       {/* <Route path="/ekleComponent" element={<AddComponent />} /> */}
       {/* <ProtectedRoute path="/ekleComponent" element={<AddComponent />} /> */}
       <Route path="/login" element={<Login />} />
