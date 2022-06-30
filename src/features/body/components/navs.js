@@ -5,6 +5,7 @@ import Content from "./content.js";
 import Login from "../../authentication/components/login.js";
 import ProtectedRoute from "./protectedRoute.js";
 import AdminPage from "../../adminPanel/components/adminPage.js";
+import About from "../view/about.js";
 
 function Navs() {
   const pages = useSelector((state) => state.addPage);
@@ -17,7 +18,7 @@ function Navs() {
         path="/adminPage"
         element={
           <ProtectedRoute>
-            <AdminPage />
+            <About />
           </ProtectedRoute>
         }
       />

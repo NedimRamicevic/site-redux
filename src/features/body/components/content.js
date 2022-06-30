@@ -7,7 +7,7 @@ function Content({ page }) {
         <div class="relative max-w-xs mx-auto xl:max-w-xs min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-xl mt-16">
           <div class="card items-center m-auto">
             <div class="card-header items-center mx-4 mt-6">
-              <a href="#" blur-shadow-image="true">
+              <a href="/" blur-shadow-image="true">
                 <img
                   class="w-auto rounded-lg m-auto"
                   src={content.img}
