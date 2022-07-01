@@ -6,15 +6,17 @@ import Login from "../../authentication/components/login.js";
 import ProtectedRoute from "./protectedRoute.js";
 import AdminPage from "../../adminPanel/components/adminPage.js";
 import About from "../view/about.js";
+import AboutUs from "../view/aboutUs.js";
 
 function Navs() {
   const pages = useSelector((state) => state.addPage);
   return (
     <Routes>
-      {pages.map((page) => (
-        <Route path={"/" + page.link} element={<Content page={page} />} />
-      ))}
+      <Route exact path="/" element={<Content />} />
+      <Route exact path="about" element={<About />} />
+      <Route exact path="/aboutUs" element={<AboutUs />} />
       <Route
+        exact
         path="/adminPage"
         element={
           <ProtectedRoute>
@@ -22,9 +24,7 @@ function Navs() {
           </ProtectedRoute>
         }
       />
-      {/* <Route path="/ekleComponent" element={<AddComponent />} /> */}
-      {/* <ProtectedRoute path="/ekleComponent" element={<AddComponent />} /> */}
-      <Route path="/login" element={<Login />} />
+      <Route exact path="/login" element={<Login />} />
     </Routes>
   );
 }
