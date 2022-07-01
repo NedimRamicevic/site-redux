@@ -1,10 +1,12 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function NAvbar() {
   const categories = useSelector((state) => state.categories);
-
+  const [isOpenFirst, setIsOpenFirst] = useState(false);
+  const [isOpenSecond, setIsOpenSecond] = useState(false);
   return (
     <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5  dark:bg-gray-800">
       <div class="grid grid-cols-4 gap-24 justify-between items-center mx-auto">
@@ -69,15 +71,27 @@ function NAvbar() {
               </Link>
             </div>
             <div class="text-cyan-500 hover:text-cyan-700">
-              <li class="group  relative dropdown  cursor-pointer tracking-wide">
-                <a>Categories</a>
-                <div class="group-hover:flex dropdown-menu absolute hidden h-auto pt-4">
+              <li class="group relative dropdown cursor-pointer tracking-wide">
+                <button>Categories</button>
+                <div class=" dropdown-menu hidden group-hover:flex  absolute h-auto pt-4">
                   <ul class="top-0 min-w-max bg-gray-800">
                     {categories.map((category) => (
-                      <li class="p-1">
-                        <a class="block  text-cyan-500 hover:text-cyan-700 cursor-pointer">
+                      <li class=" relative dropdown ">
+                        <button class="block  text-cyan-500 hover:text-cyan-700 cursor-pointer">
                           {category.name}
-                        </a>
+                        </button>
+
+                        <div class=" dropdown-menu group h-auto">
+                          <ul class="top-0 min-w-max bg-gray-800 ">
+                            {category.products.map((product) => (
+                              <li class="p-1">
+                                <button class="block  text-cyan-500 hover:text-cyan-700 cursor-pointer">
+                                  {product.name}
+                                </button>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
                       </li>
                     ))}
                   </ul>
