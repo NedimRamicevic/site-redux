@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 function NAvbar() {
   const navBarİtems = useSelector((state) => state.addPage);
+  const categories = useSelector((state) => state.categories);
 
   return (
     <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
@@ -53,37 +54,28 @@ function NAvbar() {
         </button>
         <div class="hidden w-full md:block md:w-auto" id="mobile-menu">
           <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
-            <div class="text-cyan-500">
+            <div class="text-cyan-500 hover:text-cyan-700">
               <Link to="/aboutUs">
                 <li>About Us</li>
               </Link>
             </div>
-            <div class="text-cyan-500">
+            <div class="text-cyan-500 hover:text-cyan-700">
               <Link to="/about">
                 <li>About</li>
               </Link>
             </div>
-            <div class="text-cyan-500">
+            <div class="text-cyan-500 hover:text-cyan-700">
               <li class="group  relative dropdown  cursor-pointer tracking-wide">
                 <a>Categories</a>
-                <div class="group-hover:flex dropdown-menu absolute hidden h-auto">
-                  <ul class="top-0 min-w-max bg-transparent pt-3  ">
-                    <li class="py-1">
-                      <a class="block  text-purple-500  hover:text-purple-700 cursor-pointer">
-                        Item
-                      </a>
-                    </li>
-                    <li class="py-1">
-                      <a class="block text-purple-500  hover:text-purple-700 cursor-pointer">
-                        Item 2
-                      </a>
-                    </li>
-
-                    <li class="py-1">
-                      <a class="block text-purple-500   hover:text-purple-700 cursor-pointer">
-                        Item 55555
-                      </a>
-                    </li>
+                <div class="group-hover:flex dropdown-menu absolute hidden h-auto pt-4">
+                  <ul class="top-0 min-w-max bg-gray-800">
+                    {categories.map((category) => (
+                      <li class="p-1">
+                        <a class="block  text-cyan-500 hover:text-cyan-700 cursor-pointer">
+                          {category.name}
+                        </a>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </li>
