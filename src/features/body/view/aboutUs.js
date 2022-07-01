@@ -4,7 +4,7 @@ import React from "react";
 function AboutUs() {
   return (
     <div class="py-16 bg-white">
-      <div class="container m-auto px-6 space-y-8 md:px-12 lg:px-56">
+      <div class="container  px-6 space-y-8 md:px-12 lg:px-56">
         <div class="m-auto text-center lg:w-7/12">
           <h2 class="text-2xl text-gray-700 font-bold md:text-4xl">
             Your favorite companies are our partners.
