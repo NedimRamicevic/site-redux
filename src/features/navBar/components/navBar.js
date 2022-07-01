@@ -64,6 +64,31 @@ function NAvbar() {
               </Link>
             </div>
             <div class="text-cyan-500">
+              <li class="group  relative dropdown  cursor-pointer tracking-wide">
+                <a>Categories</a>
+                <div class="group-hover:flex dropdown-menu absolute hidden h-auto">
+                  <ul class="top-0 min-w-max bg-transparent pt-3  ">
+                    <li class="py-1">
+                      <a class="block  text-purple-500  hover:text-purple-700 cursor-pointer">
+                        Item
+                      </a>
+                    </li>
+                    <li class="py-1">
+                      <a class="block text-purple-500  hover:text-purple-700 cursor-pointer">
+                        Item 2
+                      </a>
+                    </li>
+
+                    <li class="py-1">
+                      <a class="block text-purple-500   hover:text-purple-700 cursor-pointer">
+                        Item 55555
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </div>
+            <div class="text-cyan-500">
               <Link to="/login">
                 <li>Login</li>
               </Link>

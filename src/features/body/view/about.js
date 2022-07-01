@@ -4,38 +4,35 @@ import React from "react";
 
 function About() {
   return (
-    <div class="py-16 bg-white">
-      <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
-        <div class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
-          <div class="md:5/12 lg:w-5/12">
-            <img
-              src="https://tailus.io/sources/blocks/left-image/preview/images/startup.png"
-              alt="about"
-              loading="lazy"
-              width=""
-              height=""
-            />
-          </div>
-          <div class="md:7/12 lg:w-6/12">
-            <h2 class="text-2xl text-gray-900 font-bold md:text-4xl">
-              Nuxt development is carried out by passionate developers
-            </h2>
-            <p class="mt-6 text-gray-600">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum
-              omnis voluptatem accusantium nemo perspiciatis delectus atque
-              autem! Voluptatum tenetur beatae unde aperiam, repellat expedita
-              consequatur! Officiis id consequatur atque doloremque!
-            </p>
-            <p class="mt-4 text-gray-600">
-              {" "}
-              Nobis minus voluptatibus pariatur dignissimos libero quaerat iure
-              expedita at? Asperiores nemo possimus nesciunt dicta veniam
-              aspernatur quam mollitia.
-            </p>
+    <section class="text-gray-600 body-font">
+      <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+        <img
+          class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded"
+          alt="hero"
+          src="https://dummyimage.com/720x600"
+        />
+        <div class="text-center lg:w-2/3 w-full">
+          <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
+            Microdosing synth tattooed vexillologist
+          </h1>
+          <p class="mb-8 leading-relaxed">
+            Meggings kinfolk echo park stumptown DIY, kale chips beard jianbing
+            tousled. Chambray dreamcatcher trust fund, kitsch vice godard
+            disrupt ramps hexagon mustache umami snackwave tilde chillwave ugh.
+            Pour-over meditation PBR&B pickled ennui celiac mlkshk freegan photo
+            booth af fingerstache pitchfork.
+          </p>
+          <div class="flex justify-center">
+            <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+              Button
+            </button>
+            <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">
+              Button
+            </button>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
