@@ -70,31 +70,42 @@ function NAvbar() {
                 <li>About</li>
               </Link>
             </div>
-            <div class="text-cyan-500 hover:text-cyan-700">
-              <li class="group relative dropdown cursor-pointer tracking-wide">
-                <button>Categories</button>
-                <div class=" dropdown-menu hidden group-hover:flex  absolute h-auto pt-4">
-                  <ul class="top-0 min-w-max bg-gray-800">
-                    {categories.map((category) => (
-                      <li class=" relative dropdown ">
-                        <button class="block  text-cyan-500 hover:text-cyan-700 cursor-pointer">
-                          {category.name}
-                        </button>
-
-                        <div class=" dropdown-menu group h-auto">
-                          <ul class="top-0 min-w-max bg-gray-800 ">
-                            {category.products.map((product) => (
-                              <li class="p-1">
-                                <button class="block  text-cyan-500 hover:text-cyan-700 cursor-pointer">
-                                  {product.name}
+            <div class="text-cyan-500 hover:text-cyan-700  ">
+              <li class="group dropdown cursor-pointer tracking-wide">
+                <div class="relative inline-block ">
+                  <div>
+                    <button>Categories</button>
+                  </div>
+                  <div class="relative ">
+                    <div class=" dropdown-menu absolute h-auto pt-4">
+                      <ul class="top-0 min-w-max bg-gray-800 list-none">
+                        {categories.map((category) => (
+                          <li class="relative top-full hidden group-hover:flex">
+                            <div class="drowpdown gap-4">
+                              <div class="button ">
+                                <button class="block text-cyan-500 hover:text-cyan-700 cursor-pointer">
+                                  {category.name}
                                 </button>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
+                              </div>
+                              <div class="menu absolute left-full">
+                                <div class=" dropdown-menu h-auto">
+                                  <ul class="top-0 min-w-max bg-gray-800 ">
+                                    {category.products.map((product) => (
+                                      <li class="p-1">
+                                        <button class="block  text-cyan-500 hover:text-cyan-700 cursor-pointer">
+                                          {product.name}
+                                        </button>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </li>
             </div>
