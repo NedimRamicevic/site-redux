@@ -7,7 +7,7 @@ import About from "../view/about.js";
 import Home from "../view/home.js";
 import AboutUs from "../view/aboutUs.js";
 import { useSelector } from "react-redux";
-import CategoryContent from "./categoryContent.js";
+import CategoryContent from "./categoryContent.jsx";
 
 function Navs() {
   const categories = useSelector((state) => state.categories).map(
