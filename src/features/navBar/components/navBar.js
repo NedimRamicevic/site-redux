@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Navbar() {
   const categories = useSelector((state) => state.categories);
@@ -69,9 +69,9 @@ function Navbar() {
               </Link>
             </div>
             <div class="text-cyan-500 hover:text-cyan-700">
-              <Link to="/about">
+              <NavLink to="/about">
                 <li>About</li>
-              </Link>
+              </NavLink>
             </div>
             <div class="text-cyan-500 hover:text-cyan-700  ">
               <Link to="/categories">
