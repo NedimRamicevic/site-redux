@@ -71,31 +71,35 @@ function NAvbar() {
               </Link>
             </div>
             <div class="text-cyan-500 hover:text-cyan-700  ">
-              <li class="group cursor-pointer tracking-wide">
-                <button>Categories</button>
-                <div class="absolute h-auto pt-4 hidden group-hover:flex">
-                  <ul class="top-0 min-w-max bg-gray-800 list-none ">
-                    {categories.map((category) => (
-                      <li class="flex">
-                        <button class="block text-cyan-500 hover:text-cyan-700 cursor-pointer">
-                          {category.name}
-                        </button>
-                        <div class="h-auto absolute left-full">
-                          <ul class="top-0 min-w-max bg-gray-800 ">
-                            {category.products.map((product) => (
-                              <li class="p-1">
-                                <button class="block  text-cyan-500 hover:text-cyan-700 cursor-pointer">
-                                  {product.name}
-                                </button>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </li>
+              <div class="group1">
+                <li class="cursor-pointer tracking-wide">
+                  <button>Categories</button>
+                  <div class="">
+                    <div class="group1Child group absolute h-auto pt-4 ">
+                      <ul class=" top-0 min-w-max bg-gray-800 list-none ">
+                        {categories.map((category) => (
+                          <li class="group2 flex">
+                            <button class="block text-cyan-500 hover:text-cyan-700 cursor-pointer">
+                              {category.name}
+                            </button>
+                            <div class="  h-auto absolute left-full">
+                              <ul class="group2Child top-0 min-w-max bg-gray-800 ">
+                                {category.products.map((product) => (
+                                  <li class="p-1">
+                                    <button class="block text-cyan-500 hover:text-cyan-700 cursor-pointer">
+                                      {product.name}
+                                    </button>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </div>
             </div>
           </ul>
         </div>
