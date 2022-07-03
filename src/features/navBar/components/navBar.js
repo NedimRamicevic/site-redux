@@ -74,29 +74,35 @@ function NAvbar() {
               <div class="group1">
                 <li class="cursor-pointer tracking-wide">
                   <button>Categories</button>
-                  <div class="">
-                    <div class="group1Child group absolute h-auto pt-4 ">
-                      <ul class=" top-0 min-w-max bg-gray-800 list-none ">
-                        {categories.map((category) => (
-                          <li class="group2 flex">
-                            <button class="block text-cyan-500 hover:text-cyan-700 cursor-pointer">
-                              {category.name}
-                            </button>
-                            <div class="  h-auto absolute left-full">
-                              <ul class="group2Child top-0 min-w-max bg-gray-800 ">
+                  <div class="group1Child absolute h-auto ">
+                    <ul class=" top-0 min-w-max bg-white divide-y-2 divide-blue drop-shadow-2xl">
+                      {categories.map((category) => (
+                        <Link to={`/categories/${category.name}`}>
+                          <li class="group2 flex py-2 hover:bg-cyan-600 text-cyan-500 hover:text-white">
+                            <div class=" w-full px-2 ">
+                              <button class="  cursor-pointer ">
+                                {category.name}
+                              </button>
+                            </div>
+                            <div class=" h-auto absolute left-full top-auto -mt-2 drop-shadow-xl bg-white">
+                              <ul class="group2Child top-0 min-w-max border-t-2 border-blue-400 divide-y-2 divide-blue ">
                                 {category.products.map((product) => (
-                                  <li class="p-1">
-                                    <button class="block text-cyan-500 hover:text-cyan-700 cursor-pointer">
-                                      {product.name}
-                                    </button>
-                                  </li>
+                                  <link to={`/products/${product.name}`}>
+                                    <li class=" flex py-2 text-cyan-500 hover:text-white hover:bg-cyan-600">
+                                      <div class=" w-full px-2 ">
+                                        <button class=" cursor-pointer">
+                                          {product.name}
+                                        </button>
+                                      </div>
+                                    </li>
+                                  </link>
                                 ))}
                               </ul>
                             </div>
                           </li>
-                        ))}
-                      </ul>
-                    </div>
+                        </Link>
+                      ))}
+                    </ul>
                   </div>
                 </li>
               </div>

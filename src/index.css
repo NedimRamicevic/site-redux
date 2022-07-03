@@ -16,14 +16,14 @@ body {
   display:none;
 }
 .group1:hover .group1Child{ 
-  display: flex; 
+  display: block; 
   color: blue;
 }
 .group2Child{
   display:none;
 }
 .group2:hover .group2Child{ 
-  display: flex; 
+  display: block; 
   color: blue;
 }
 
