@@ -21,6 +21,70 @@ const categorySlice = createSlice({
           price: "$100",
         },
         {
+          id: 1,
+          name: "Apple",
+          description: "Apple",
+          image:
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+          price: "$100",
+        },
+        {
+          id: 1,
+          name: "Apple",
+          description: "Apple",
+          image:
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+          price: "$100",
+        },
+        {
+          id: 1,
+          name: "Apple",
+          description: "Apple",
+          image:
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+          price: "$100",
+        },
+        {
+          id: 1,
+          name: "Apple",
+          description: "Apple",
+          image:
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+          price: "$100",
+        },
+        {
+          id: 1,
+          name: "Apple",
+          description: "Apple",
+          image:
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+          price: "$100",
+        },
+        {
+          id: 1,
+          name: "Apple",
+          description: "Apple",
+          image:
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+          price: "$100",
+        },
+        {
+          id: 1,
+          name: "Apple",
+          description: "Apple",
+          image:
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+          price: "$100",
+        },
+        {
+          id: 1,
+          name: "Apple",
+          description: "Apple",
+          image:
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+          price: "$100",
+        },
+        {
           id: 2,
           name: "Microsoft",
           description: "Microsoft",
