@@ -11,6 +11,24 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+.group1Child{
+  display:none;
+}
+.group1:hover .group1Child{ 
+  display: flex; 
+  color: blue;
+}
+.group2Child{
+  display:none;
+}
+.group2:hover .group2Child{ 
+  display: flex; 
+  color: blue;
+}
+
+
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
