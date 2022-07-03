@@ -14,38 +14,20 @@ function Navs() {
   const categories = useSelector((state) => state.categories).map(
     (category) => category
   );
-  const products = useSelector((state) => state.categories).map((category) =>
-    category.products.map((product) => product.name)
-  );
   return (
     <Routes>
       <Route path="/home" element={<Home />} />
       <Route exact path="/about" element={<About />} />
       <Route exact path="/aboutUs" element={<AboutUs />} />
-      {categories.map(
-        (category) => (
-          console.log(category.name + "hooooop"),
-          (
-            <Route
-              exact
-              path={"/categories" + category.name}
-              element={<AboutUs />}
-            />
-          )
-        )
-      )}
-      {products.map(
-        (product) => (
-          console.log(product.name + "nabeeeeer"),
-          (
-            <Route
-              exact
-              path={"/products" + product.name}
-              element={<AboutUs />}
-            />
-          )
-        )
-      )}
+
+      {categories.map((category) => (
+        <Route
+          exact
+          path={"/categories/" + category.name}
+          element={<CategoryContent category={category} />}
+        />
+      ))}
+
       <Route
         exact
         path="/adminPage"
