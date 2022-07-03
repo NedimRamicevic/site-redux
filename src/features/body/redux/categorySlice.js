@@ -7,7 +7,7 @@ const categorySlice = createSlice({
   initialState: [
     {
       id: 1,
-      name: "Web Development",
+      name: "WebDevelopment",
       description: "Web Development",
       image:
         "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
@@ -32,7 +32,7 @@ const categorySlice = createSlice({
     },
     {
       id: 2,
-      name: "Mobile Development",
+      name: "MobileDevelopment",
       description: "Mobile Development",
       image:
         "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",

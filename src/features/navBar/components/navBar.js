@@ -1,12 +1,10 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
-function NAvbar() {
+function Navbar() {
   const categories = useSelector((state) => state.categories);
-  const [isOpenFirst, setIsOpenFirst] = useState(false);
-  const [isOpenSecond, setIsOpenSecond] = useState(false);
+
   return (
     <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5  dark:bg-gray-800">
       <div class="grid grid-cols-4 gap-24 justify-between items-center mx-auto">
@@ -61,6 +59,11 @@ function NAvbar() {
         >
           <ul class="flex justify-end  self md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
             <div class="text-cyan-500 hover:text-cyan-700">
+              <Link to="/">
+                <li>Home</li>
+              </Link>
+            </div>
+            <div class="text-cyan-500 hover:text-cyan-700">
               <Link to="/aboutUs">
                 <li>About Us</li>
               </Link>
@@ -71,41 +74,16 @@ function NAvbar() {
               </Link>
             </div>
             <div class="text-cyan-500 hover:text-cyan-700  ">
-              <div class="group1">
-                <li class="cursor-pointer tracking-wide">
+              <Link to="/categories">
+                <li class="group1 cursor-pointer tracking-wide">
                   <button>Categories</button>
                   <div class="group1Child absolute h-auto ">
                     <ul class=" top-0 min-w-max bg-white divide-y-2 divide-blue drop-shadow-2xl">
-                      {categories.map((category) => (
-                        <Link to={`/categories/${category.name}`}>
-                          <li class="group2 flex py-2 hover:bg-cyan-600 text-cyan-500 hover:text-white">
-                            <div class=" w-full px-2 ">
-                              <button class="  cursor-pointer ">
-                                {category.name}
-                              </button>
-                            </div>
-                            <div class=" h-auto absolute left-full top-auto -mt-2 drop-shadow-xl bg-white">
-                              <ul class="group2Child top-0 min-w-max border-t-2 border-blue-400 divide-y-2 divide-blue ">
-                                {category.products.map((product) => (
-                                  <link to={`/products/${product.name}`}>
-                                    <li class=" flex py-2 text-cyan-500 hover:text-white hover:bg-cyan-600">
-                                      <div class=" w-full px-2 ">
-                                        <button class=" cursor-pointer">
-                                          {product.name}
-                                        </button>
-                                      </div>
-                                    </li>
-                                  </link>
-                                ))}
-                              </ul>
-                            </div>
-                          </li>
-                        </Link>
-                      ))}
+                      {categories.map((category) => categoryMenuItem(category))}
                     </ul>
                   </div>
                 </li>
-              </div>
+              </Link>
             </div>
           </ul>
         </div>
@@ -121,6 +99,35 @@ function NAvbar() {
       </div>
     </nav>
   );
+
+  function categoryMenuItem(category) {
+    return (
+      <Link to={"/categories/" + category.name}>
+        <li class="group2 flex py-2 hover:bg-cyan-600 text-cyan-500 hover:text-white">
+          <div class=" w-full px-2 ">
+            <button class="  cursor-pointer ">{category.name}</button>
+          </div>
+          <div class=" h-auto absolute left-full top-auto -mt-2 drop-shadow-xl bg-white">
+            <ul class="group2Child top-0 min-w-max border-t-2 border-blue-400 divide-y-2 divide-blue ">
+              {category.products.map((product) => productMenuItem(product))}
+            </ul>
+          </div>
+        </li>
+      </Link>
+    );
+  }
+
+  function productMenuItem(product) {
+    return (
+      <Link to={"/products/" + product.name}>
+        <li class=" flex py-2 text-cyan-500 hover:text-white hover:bg-cyan-600">
+          <div class=" w-full px-2 ">
+            <button class=" cursor-pointer">{product.name}</button>
+          </div>
+        </li>
+      </Link>
+    );
+  }
 }
 
-export default NAvbar;
+export default Navbar;
