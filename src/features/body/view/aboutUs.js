@@ -4,6 +4,35 @@ import React from "react";
 function AboutUs() {
   return (
     <div class="py-16 bg-white">
+      <div className="flex max-w-7xl m-auto mt-5 mb-14">
+        <div className="w-1/2">
+          <div className=" text-5xl font-bold my-5">
+            Pres Makina
+          </div>
+          <div className=" text-red-700 mb-5">
+            80 Yıllık Tecrübe
+          </div>
+          <p className=" leading-7 ">
+            "Bugün dünden daha iyiyiz, yarın ise mükemmelliğe adanmış yeni bir gün sadece…" <br /><br />
+            1940 yılında küçük bir atölyede üretime başlayan PRES MAKİNA 80. yılını doldurmanın haklı gururunu yaşıyor.
+            80 yılı aşan tecrübesiyle müşterisine, çalışanına en iyiyi sunma çabasında olan ve koşulsuz müşteri memnuniyetini
+            her zaman ilke edinen firmamız kuruluşunun ilk günlerindeki heyecanını kaybetmeden, gelecekte de yatırımlarını
+            arttırarak, Beton Briket Tesisi ve Beton Parke Tesisi üretiminde liderliğini devam ettirecektir. <br /><br />
+            PRES MAKINA olarak makina sektöründe; özgün ve kaliteli ürünlerimiz, nitelikli insan kaynağımız ve firma
+            değerlerimizle yakaladığımız başarıyı gelecekte de sürdüreceğimize inanıyoruz. Özellikle son yıllarda uluslararası
+            bazı dev markaların da pazara girmesiyle doğan rekabet ortamında, sahip olduğumuz üstünlükleri lehimize kullanıp,
+            geçmişte olduğu gibi, önümüzdeki dönemlerde de yılmadan çalışmaya devam edeceğiz.
+          </p>
+        </div>
+        <div className="w-1/2">
+          <div className="m-auto rounded-xl border-[1px] w-2/3">
+            <img className="rounded-xl" src={require('../assets/jpg/about.jpg')} />
+          </div>
+        </div>
+      </div>
+      <div>
+        <iframe className="m-auto" width="560" height="315" src="https://www.youtube.com/embed/3095_w_666w" frameborder="0" allowFullScreen='true' ></iframe>
+      </div>
       <div class="container m-auto px-6 space-y-8 md:px-12 lg:px-56">
         <div class="m-auto text-center lg:w-7/12">
           <h2 class="text-2xl text-gray-700 font-bold md:text-4xl">
@@ -69,7 +98,7 @@ function AboutUs() {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
 export default AboutUs;

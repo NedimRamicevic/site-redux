@@ -11,7 +11,7 @@ function Navbar() {
         <div class="pl-6">
           <a href="https://flowbite.com" class="flex items-center">
             <img
-              src="/docs/images/logo.svg"
+              src="logo512.png"
               class="mr-3 h-6 sm:h-9"
               alt="Flowbite Logo"
             />

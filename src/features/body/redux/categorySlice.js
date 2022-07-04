@@ -10,7 +10,7 @@ const categorySlice = createSlice({
       name: "WebDevelopment",
       description: "Web Development",
       image:
-        "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+        "https://www.presmakina.com/presmakina/urun/betonblok/pro295/home.jpg",
       products: [
         {
           id: 1,
@@ -99,7 +99,7 @@ const categorySlice = createSlice({
       name: "MobileDevelopment",
       description: "Mobile Development",
       image:
-        "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+        "https://www.presmakina.com/presmakina/urun/betonblok/pro100/home.jpg",
       products: [
         {
           id: 1,

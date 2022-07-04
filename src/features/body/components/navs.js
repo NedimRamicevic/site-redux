@@ -9,6 +9,7 @@ import AboutUs from "../view/aboutUs.js";
 import { useSelector } from "react-redux";
 import CategoryContent from "./categoryContent.jsx";
 import ProductContent from "./productContent.jsx";
+import Categories from "../view/categories.js";
 
 function Navs() {
   const categories = useSelector((state) => state.categories).map(
@@ -20,6 +21,7 @@ function Navs() {
       <Route path="/home" element={<Home />} />
       <Route exact path="/about" element={<About />} />
       <Route exact path="/aboutUs" element={<AboutUs />} />
+      <Route exact path="/categories" element={<Categories />} />
 
       {categories.map((category) => (
         <Route
