@@ -2,6 +2,12 @@ import React, { useState, useEffect } from "react";
 
 function ProductContent({ product }) {
   const [productContent, setproductContent] = useState(null);
+  const [featureTab, setFeatureTab] = useState(1);
+
+  function selectedFeatureTab(tab) {
+    setFeatureTab(tab);
+  };
+
   useEffect(() => {
     setTimeout(() => {
       setproductContent(product);
@@ -61,95 +67,32 @@ function ProductContent({ product }) {
 
   function productFeatures(){
     return(
-      <div className=" m-auto">
+      <div className=" m-auto max-w-5xl">
         <div className="p-12 items-center">
-        <ul class="nav nav-tabs flex flex-col justify-center md:flex-row flex-wrap list-none border-b-0 pl-0 mb-4" id="tabs-tab"
-  role="tablist">
-  <li class="nav-item" role="presentation">
-    <a href="#tabs-home" class="
-      nav-link
-      block
-      font-medium
-      text-xs
-      leading-tight
-      uppercase
-      border-x-0 border-t-0 border-b-2 border-transparent
-      px-6
-      py-3
-      my-2
-      hover:border-transparent hover:bg-gray-100
-      focus:border-transparent
-      active
-    " id="tabs-home-tab" data-bs-toggle="pill" data-bs-target="#tabs-home" role="tab" aria-controls="tabs-home"
-      aria-selected="true">Home</a>
-  </li>
-  <li class="nav-item" role="presentation">
-    <a href="#tabs-profile" class="
-      nav-link
-      block
-      font-medium
-      text-xs
-      leading-tight
-      uppercase
-      border-x-0 border-t-0 border-b-2 border-transparent
-      px-6
-      py-3
-      my-2
-      hover:border-transparent hover:bg-gray-100
-      focus:border-transparent
-    " id="tabs-profile-tab" data-bs-toggle="pill" data-bs-target="#tabs-profile" role="tab"
-      aria-controls="tabs-profile" aria-selected="false">Profile</a>
-  </li>
-  <li class="nav-item" role="presentation">
-    <a href="#tabs-messages" class="
-      nav-link
-      block
-      font-medium
-      text-xs
-      leading-tight
-      uppercase
-      border-x-0 border-t-0 border-b-2 border-transparent
-      px-6
-      py-3
-      my-2
-      hover:border-transparent hover:bg-gray-100
-      focus:border-transparent
-    " id="tabs-messages-tab" data-bs-toggle="pill" data-bs-target="#tabs-messages" role="tab"
-      aria-controls="tabs-messages" aria-selected="false">Messages</a>
-  </li>
-  <li class="nav-item" role="presentation">
-    <a href="#tabs-contact" class="
-      nav-link
-      disabled
-      pointer-events-none
-      block
-      font-medium
-      text-xs
-      leading-tight
-      uppercase
-      border-x-0 border-t-0 border-b-2 border-transparent
-      px-6
-      py-3
-      my-2
-      hover:border-transparent hover:bg-gray-100
-      focus:border-transparent
-    " id="tabs-contact-tab" data-bs-toggle="pill" data-bs-target="#tabs-contact" role="tab"
-      aria-controls="tabs-contact" aria-selected="false">Contact</a>
-  </li>
+        <ul class="flex justify-center border-b border-gray-200">
+    <li class="mr-2">
+        <button onClick={e=> selectedFeatureTab(1)} aria-current="page" class={"inline-block  rounded-t-lg py-4 px-4 text-sm font-medium text-center"+ (featureTab === 1 ? " text-blue-500 bg-white border-b-2 border-blue-500" : "text-gray-500 hover:border-b-2 hover:border-blue-500 hover:text-blue-500")}>Profile</button>
+    </li>
+    <li class="mr-2">
+        <button onClick={e=> selectedFeatureTab(2)} class={"inline-block  rounded-t-lg py-4 px-4 text-sm font-medium text-center"+ (featureTab ===  2 ? " text-blue-500 bg-white border-b-2 border-blue-500" : "text-gray-500 hover:border-b-2 hover:border-blue-500 hover:text-blue-500")}>Dashboard</button>
+    </li>
+    <li class="mr-2">
+        <button onClick={e=> selectedFeatureTab(3) }class={"inline-block  rounded-t-lg py-4 px-4 text-sm font-medium text-center"+ (featureTab ===  3 ? " text-blue-500 bg-white border-b-2 border-blue-500" : "text-gray-500 hover:border-b-2 hover:border-blue-500 hover:text-blue-500")}>Settings</button>
+    </li>
+    <li class="mr-2">
+        <button onClick={e=> selectedFeatureTab(4)} class={"inline-block  rounded-t-lg py-4 px-4 text-sm font-medium text-center"+ (featureTab ===  4 ? " text-blue-500 bg-white border-b-2 border-blue-500" : "text-gray-500 hover:border-b-2 hover:border-blue-500 hover:text-blue-500")}>Contacts</button>
+    </li>
 </ul>
-<div class="tab-content m-auto items-center max-w-fit" id="tabs-tabContent">
-  <div class="tab-pane fade show active" id="tabs-home" role="tabpanel" aria-labelledby="tabs-home-tab">
+<div class="tab-content m-auto items-center max-w-fit pt-2" >
+  { featureTab === 1 ? <div class="tab-pane fade show active"  >
     Tab 1 content
-  </div>
-  <div class="tab-pane fade" id="tabs-profile" role="tabpanel" aria-labelledby="tabs-profile-tab">
+  </div> : featureTab === 2 ? <div class="tab-pane fade">
     Tab 2 content
-  </div>
-  <div class="tab-pane fade" id="tabs-messages" role="tabpanel" aria-labelledby="tabs-profile-tab">
+  </div> : featureTab === 3 ? <div class="tab-pane fade">
     Tab 3 content
-  </div>
-  <div class="tab-pane fade" id="tabs-contact" role="tabpanel" aria-labelledby="tabs-contact-tab">
+  </div>: featureTab === 4 ? <div class="tab-pane fade">
     Tab 4 content
-  </div>
+  </div> : null}
 </div>
         </div>
       </div>
