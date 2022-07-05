@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from "react";
+import { useNavigate } from "react-router-dom";
 
 function CategoryContent({ category }) {
-
+  const navigate = useNavigate();
     const [categoryContent, setCategoryContent] = useState(null);
 
     useEffect(() => {
@@ -20,7 +21,9 @@ function CategoryContent({ category }) {
   );
 
   function productItem(product) {
-    return <div class="bg-white rounded-lg border border-gray-200 shadow-md my-3 w-1/4">
+    return <div class="bg-white rounded-lg border cursor-pointer border-gray-200 shadow-md my-3 w-1/4"
+    onClick={() => navigate(`/products/${product.name}`)}
+    >
       <img class="rounded-t-lg mx-auto" src={product.image} alt="" />
       <div class="p-5">
         <h5 class="mb-2 text-2xl text-center font-bold tracking-tight text-gray-900 ">
