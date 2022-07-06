@@ -2,23 +2,20 @@
 import React from "react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addComponent } from "../redux/addPageSlice";
 import { useSelector } from "react-redux";
+import { addProducttoCategory } from "../../body/redux/categorySlice";
 
 function AddComponent() {
-  const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [page, setPage] = useState("");
   const [name, setName] = useState("");
   const [image, setImage] = useState("");
   const dispatch = useDispatch();
 
-  const options = useSelector((state) => state.addPage);
+  const options = useSelector((state) => state.categories);
 
   const handleChange = (event) => {
     setPage(event.target.value);
-    setName(event.target.value);
-    console.log(event.target.value);
   };
 
   return (
@@ -36,9 +33,9 @@ function AddComponent() {
           <input
             type="text"
             class="form-item"
-            onKeyUp={(e) => setTitle(e.target.value)}
+            onKeyUp={(e) => setName(e.target.value)}
             id="exampleInput8"
-            placeholder="Title"
+            placeholder="Name"
           />
         </div>
         <div class="form-group mb-6">
@@ -66,7 +63,7 @@ function AddComponent() {
           type="button"
           class="form-button"
           onClick={() => {
-            dispatch(addComponent({ name, title, content, page, image }));
+            dispatch(addProducttoCategory({ name, content, page, image }));
             console.log("naber" + name);
           }}
         >
@@ -76,11 +73,12 @@ function AddComponent() {
     </div>
   );
 }
-const Dropdown = ({ label, value, options, onChange }) => {
+const Dropdown = ({ value, options, onChange }) => {
   return (
     <div class="form-item">
       <select
-        className="w-full bg-white bg-clip-padding rounded m-0  focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+        placeholder="Select Category"
+        className="appearance-none w-full bg-white bg-clip-padding rounded m-0 focus:outline-none
           transition
           ease-in-out"
         value={value}
