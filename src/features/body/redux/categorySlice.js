@@ -133,7 +133,19 @@ const categorySlice = createSlice({
       state[action.payload.index] = action.payload.category;
     },
     addProducttoCategory: (state, action) => {
-      state[action.payload.index].products.push(action.payload.product);
+      state = state.map((category) => {
+        if (category.name === action.payload.page) {
+          category.products.push({
+            id: category.products.length + 1,
+            name: action.payload.name,
+            description: action.payload.content,
+            image:
+              "https://tailus.io/sources/blocks/company-site/preview/images/clients/microsoft.svg",
+            price: "$200",
+          });
+        }
+        return state;
+      });
     },
     removeProductfromCategory: (state, action) => {
       state[action.payload.index].products.splice(action.payload.product, 1);
