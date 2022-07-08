@@ -1,6 +1,20 @@
 // category Slice
 
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+//import axios from "axios";
+
+// const initialState = {
+//   categories: [],
+//   loading: false,
+//   error: "",
+// };
+
+// export const fetchCategories = createAsyncThunk(
+//   "categories/fetchCategories",
+//   () => {
+//     return axios.get("/api/categories");
+//   }
+// );
 
 const categorySlice = createSlice({
   name: "category",
@@ -122,6 +136,19 @@ const categorySlice = createSlice({
       ],
     },
   ],
+  extraReducers: {
+    [fetchCategories.pending]: (state, action) => {
+      state.loading = true;
+    },
+    [fetchCategories.fulfilled]: (state, action) => {
+      state.categories = action.payload;
+      state.loading = false;
+    },
+    [fetchCategories.rejected]: (state, action) => {
+      state.error = action.error;
+      state.loading = false;
+    },
+  },
   reducers: {
     addCategory: (state, action) => {
       state.push(action.payload);
