@@ -1,11 +1,23 @@
 import React, {useState, useEffect} from "react";
 import { useNavigate } from "react-router-dom";
+//import { useSelector, useDispatch } from "react-redux";
+//import { fetchCategories } from "../../../store/actions/categoryActions";
 
 function CategoryContent({ category }) {
   const navigate = useNavigate();
-    const [categoryContent, setCategoryContent] = useState(null);
+  const [categoryContent, setCategoryContent] = useState(null);
+
+
+  // using api to get category content
+  // const dispatch = useDispatch();
+  // const categories  = useSelector((state) => state.categories);
+
+
 
     useEffect(() => {
+      // fetching categories
+      //dispatch(fetchCategories());
+
       setTimeout(() => {
         setCategoryContent(category);
       }, 500);

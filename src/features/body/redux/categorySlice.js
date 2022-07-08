@@ -1,7 +1,7 @@
 // category Slice
 
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-//import axios from "axios";
+import axios from "axios";
 
 // const initialState = {
 //   categories: [],
@@ -9,12 +9,12 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 //   error: "",
 // };
 
-// export const fetchCategories = createAsyncThunk(
-//   "categories/fetchCategories",
-//   () => {
-//     return axios.get("/api/categories");
-//   }
-// );
+export const fetchCategories = createAsyncThunk(
+  "categories/fetchCategories",
+  () => {
+    return axios.get("/api/categories");
+  }
+);
 
 const categorySlice = createSlice({
   name: "category",
