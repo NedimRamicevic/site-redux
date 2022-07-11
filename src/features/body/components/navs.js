@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Login from "../../authentication/components/login.js";
 import ProtectedRoute from "./protectedRoute.js";
-import AdminPage from "../../adminPanel/components/adminPage.js";
+import AdminDashboard from "../../adminPanel/view/adminPanel";
 import About from "../view/about.js";
 import Home from "../view/home.js";
 import AboutUs from "../view/aboutUs.js";
@@ -45,7 +45,7 @@ function Navs() {
         path="/adminPage"
         element={
           <ProtectedRoute>
-            <AdminPage />
+            <AdminDashboard />
           </ProtectedRoute>
         }
       />

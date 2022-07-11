@@ -2,7 +2,7 @@
 
 import React from 'react'
 
-function sideBar() {
+function SideBar() {
   return (
     <div className='sideBar'>
         <div className='sideBar__header'>
@@ -26,4 +26,4 @@ function sideBar() {
   )
 }
 
-export default sideBar
+export default SideBar
