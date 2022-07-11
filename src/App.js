@@ -9,7 +9,6 @@ function App() {
       <div className="App h-full">
         <NavBar />
         <Navs />
-        
       </div>
     </BrowserRouter>
   );
