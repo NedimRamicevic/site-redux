@@ -28,56 +28,9 @@ const categorySlice = createSlice({
       products: [
         {
           id: 1,
-          name: "Apple",
-          description: "Apple",
-          image:
-            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
-          price: "$100",
-        },
-        {
-          id: 1,
-          name: "Apple",
-          description: "Apple",
-          image:
-            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
-          price: "$100",
-        },
-        {
-          id: 1,
-          name: "Apple",
-          description: "Apple",
-          image:
-            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
-          price: "$100",
-        },
-        {
-          id: 1,
-          name: "Apple",
-          description: "Apple",
-          image:
-            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
-          price: "$100",
-        },
-        {
-          id: 1,
-          name: "Apple",
-          description: "Apple",
-          image:
-            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
-          price: "$100",
-        },
-        {
-          id: 1,
-          name: "Apple",
-          description: "Apple",
-          image:
-            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
-          price: "$100",
-        },
-        {
-          id: 1,
-          name: "Apple",
-          description: "Apple",
+          name: "Pro100",
+          description:
+            "Sabit yarı otomatik beton blok üretim makinasıdır. Beton malzemeleri için tek hazneye sahiptir. Bu nedenle tek çeşit harç ile üretim yapmaktadır. Kompakt ve sağlam mekanik, hidrolik ve elektrik bileşenler ile üretilmiştir. Pro 100 modeli, kısa vibrasyon süresiyle kalıp tipine bağlı olarak, her türlü briket, dolu blok, asmolen ve t blok ve tek katmanlı parke taşı üretebilir.",
           image:
             "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
           price: "$100",

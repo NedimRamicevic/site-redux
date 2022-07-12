@@ -1,15 +1,16 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Login from "../../authentication/components/login.js";
-import ProtectedRoute from "./protectedRoute.js";
+import Login from "../../authentication/components/login";
+import ProtectedRoute from "./protectedRoute";
 import AdminDashboard from "../../adminPanel/view/adminPanel";
-import About from "../view/about.js";
-import Home from "../view/home.js";
-import AboutUs from "../view/aboutUs.js";
+import About from "../view/about";
+import Home from "../view/home";
+import AboutUs from "../view/aboutUs";
 import { useSelector } from "react-redux";
-import CategoryContent from "./categoryContent.jsx";
-import ProductContent from "./productContent.jsx";
-import Categories from "../view/categories.js";
+import CategoryContent from "./categoryContent";
+import ProductContent from "./productContent";
+import Product from "../view/product";
+import Categories from "../view/categories";
 import AddProduct from "../../adminPanel/components/addProduct";
 import AddCategory from "../../adminPanel/components/addCategory";
 
@@ -32,15 +33,21 @@ function Navs() {
           element={<CategoryContent category={category} />}
         />
       ))}
-      {categories.map((category) =>
-        category.products.map((product) => (
-          <Route
-            exact
-            path={"/products/" + product.name}
-            element={<ProductContent product={product} />}
-          />
-        ))
-      )}
+        {categories.map((category) => {
+          return (
+            <Route path="products" element={<Product product={category.products} />} >
+            {category.products.map((product) => (
+            <Route
+              exact
+              path={product.name}
+              element={<ProductContent product={product} />}
+            />
+          ))}
+          </Route>
+          )
+        }
+          
+        )}
 
       <Route
         path="/adminPage"

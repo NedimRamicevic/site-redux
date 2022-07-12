@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { Link, Outlet } from "react-router-dom";
 
-function ProductContent({ product }) {
+
+function Product({ product }) {
   const [productContent, setproductContent] = useState(null);
   const [featureTab, setFeatureTab] = useState(1);
 
@@ -14,9 +16,21 @@ function ProductContent({ product }) {
     }, 2000);
   }, [product]);
   return productContent ? (
-    <div className="h-full product w-3/4 flex-col mt-5 mb-14">
-      {productDescription()}
-      {productFeatures()}
+    <div className="h-full">
+      <div className="flex h-full max-w-7xl m-auto mt-5 mb-14">
+        <div className="product-list w-1/4 max-h-min text-center mt-12 mb-14">
+            <ul className=" bg-white rounded-xl w-2/3 h-fit m-auto py-1 shadow-md shadow-black ">
+                {product.map((product) => (
+                    <Link to={product.name}>
+                    <li className=" border rounded-md py-2 shadow-md shadow-white hover:bg-cyan-500 hover:text-white">
+                        <span>{product.name}</span>
+                    </li>
+                  </Link>
+                  ))}
+            </ul>
+        </div>
+        <Outlet/>
+      </div>
     </div>
   ) : (
     loading()
@@ -36,7 +50,14 @@ function ProductContent({ product }) {
   }
   function productDescription(){
     return(
-      <div className="flex max-w-7xl m-auto mt-5 mb-14">  
+      <div className="flex max-w-7xl m-auto mt-5 mb-14">
+        <div className="product-list w-1/4 text-center mt-5 mb-14">
+            <ul className=" bg-slate-600 rounded-xl w-2/3 h-full m-auto py-3 ">
+              <li className=" bg-cyan-500 rounded-lg">
+                <span>{product.name}</span>
+              </li>
+            </ul>
+        </div>
         <div className="product-description w-3/4 flex mt-5 mb-14">
         <div className="w-1/3">
           <div className="rounded-xl border-[1px] w-2/3">
@@ -91,4 +112,4 @@ function ProductContent({ product }) {
   }
 }
 
-export default ProductContent;
+export default Product;
