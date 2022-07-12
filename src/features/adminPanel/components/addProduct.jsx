@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { addProducttoCategory } from "../../body/redux/categorySlice";
 
-function AddComponent() {
+function AddProduct() {
   const [content, setContent] = useState("");
   const [page, setPage] = useState("");
   const [name, setName] = useState("");
@@ -92,4 +92,4 @@ const Dropdown = ({ value, options, onChange }) => {
   );
 };
 
-export default AddComponent;
+export default AddProduct;

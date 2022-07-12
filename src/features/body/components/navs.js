@@ -10,6 +10,8 @@ import { useSelector } from "react-redux";
 import CategoryContent from "./categoryContent.jsx";
 import ProductContent from "./productContent.jsx";
 import Categories from "../view/categories.js";
+import AddProduct from "../../adminPanel/components/addProduct";
+import AddCategory from "../../adminPanel/components/addCategory";
 
 function Navs() {
   const categories = useSelector((state) => state.categories).map(
@@ -41,14 +43,17 @@ function Navs() {
       )}
 
       <Route
-        exact
         path="/adminPage"
         element={
           <ProtectedRoute>
             <AdminDashboard />
           </ProtectedRoute>
         }
-      />
+      >
+        <Route path="addProduct" element={<AddProduct />} />
+        <Route path="addCategory" element={<AddCategory />} />
+      </Route>
+
       <Route exact path="/login" element={<Login />} />
     </Routes>
   );

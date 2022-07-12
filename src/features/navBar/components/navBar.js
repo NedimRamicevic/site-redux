@@ -69,9 +69,9 @@ function Navbar() {
               </Link>
             </div>
             <div class="text-cyan-500 hover:text-cyan-700">
-              <NavLink to="/about">
+              <Link to="/about">
                 <li>About</li>
-              </NavLink>
+              </Link>
             </div>
             <div class="text-cyan-500 hover:text-cyan-700  ">
               <Link to="/categories">

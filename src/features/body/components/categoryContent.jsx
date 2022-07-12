@@ -8,14 +8,14 @@ function CategoryContent({ category }) {
   const [categoryContent, setCategoryContent] = useState(null);
 
 
-  // using api to get category content
+  // ---- using api to get category content ----
   // const dispatch = useDispatch();
   // const categories  = useSelector((state) => state.categories);
 
 
 
     useEffect(() => {
-      // fetching categories
+      // ---- fetching categories ----
       //dispatch(fetchCategories());
 
       setTimeout(() => {
