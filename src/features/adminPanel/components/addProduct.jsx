@@ -3,7 +3,7 @@ import React from "react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import { addProducttoCategory } from "../../body/redux/categorySlice";
+import { addProducttoCategory } from "../redux/categorySlice";
 
 function AddProduct() {
   const [content, setContent] = useState("");
@@ -19,7 +19,7 @@ function AddProduct() {
   };
 
   return (
-    <div class="block p-6 rounded-lg shadow-lg bg-white w-1/2 mx-auto">
+    <div class="block p-6 rounded-lg shadow-lg bg-white w-1/3 mx-auto">
       <div className="text-center pb-6">
         <h1>Add Product </h1>
       </div>

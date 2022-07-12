@@ -151,7 +151,13 @@ const categorySlice = createSlice({
   },
   reducers: {
     addCategory: (state, action) => {
-      state.push(action.payload);
+      state.push({
+        id: state.length + 1, // id is the length of the array + 1
+        name: action.payload.name, // action.payload is the name of the new category
+        description: action.payload.description,
+        image: "https://via.placeholder.com/150", // image: "https://via.placeholder.com/150",
+        products: [], // products will be added later
+      });
     },
     removeCategory: (state, action) => {
       state.splice(action.payload, 1);
