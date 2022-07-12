@@ -11,12 +11,17 @@ function ProductContent({ product }) {
   useEffect(() => {
     setTimeout(() => {
       setproductContent(product);
-    }, 2000);
+    }, 100);
   }, [product]);
   return productContent ? (
     <div className="h-full product w-3/4 flex-col mt-5 mb-14">
+      <div className="h-1/2">
       {productDescription()}
+      </div>
+      <div className="h-1/2">
       {productFeatures()}
+      </div>
+      
     </div>
   ) : (
     loading()
@@ -36,15 +41,15 @@ function ProductContent({ product }) {
   }
   function productDescription(){
     return(
-      <div className="flex max-w-7xl m-auto mt-5 mb-14">  
-        <div className="product-description w-3/4 flex mt-5 mb-14">
+      <div className="flex max-w-7xl m-auto mt-5 mb-14 align-top">  
+        <div className="product-description w-3/4 flex mt-3 mb-14 ">
         <div className="w-1/3">
           <div className="rounded-xl border-[1px] w-2/3">
             <img className="rounded-xl" src={require('../assets/jpg/about.jpg')} alt="aboutUs"/>
           </div>
         </div>
-        <div className="w-2/3">
-          <div className=" text-5xl font-bold my-5">
+        <div className="w-2/3 ">
+          <div className=" text-5xl font-bold mb-3">
             {productContent.name}
           </div>
           <p className=" leading-7 ">

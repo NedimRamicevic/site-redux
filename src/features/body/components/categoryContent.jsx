@@ -45,9 +45,6 @@ function CategoryContent({ category }) {
         <h5 class="mb-2 text-2xl text-center font-bold tracking-tight text-gray-900 ">
           {product.name}
         </h5>
-        <p class="mb-3 text-center font-normal text-gray-700 ">
-          {product.description}
-        </p>
       </div>
     </div>;
   }
