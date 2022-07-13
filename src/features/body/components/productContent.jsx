@@ -67,28 +67,44 @@ function ProductContent({ product }) {
         <div className="p-12 items-center">
         <ul class="flex justify-center border-b border-gray-200">
     <li class="mr-2">
-        <button onClick={e=> selectedFeatureTab(1)} aria-current="page" class={"inline-block  rounded-t-lg py-4 px-4 text-sm font-medium text-center"+ (featureTab === 1 ? " text-blue-500 bg-white border-b-2 border-blue-500" : "text-gray-500 hover:border-b-2 hover:border-blue-500 hover:text-blue-500")}>Profile</button>
+        <button onClick={e=> selectedFeatureTab(1)} aria-current="page" class={"inline-block  rounded-t-lg py-4 px-4 text-sm font-medium text-center"+ (featureTab === 1 ? " text-blue-500 bg-white border-b-2 border-blue-500" : "text-gray-500 hover:border-b-2 hover:border-blue-500 hover:text-blue-500")}>Teknik Özellikler</button>
     </li>
     <li class="mr-2">
-        <button onClick={e=> selectedFeatureTab(2)} class={"inline-block  rounded-t-lg py-4 px-4 text-sm font-medium text-center"+ (featureTab ===  2 ? " text-blue-500 bg-white border-b-2 border-blue-500" : "text-gray-500 hover:border-b-2 hover:border-blue-500 hover:text-blue-500")}>Dashboard</button>
+        <button onClick={e=> selectedFeatureTab(2)} class={"inline-block  rounded-t-lg py-4 px-4 text-sm font-medium text-center"+ (featureTab ===  2 ? " text-blue-500 bg-white border-b-2 border-blue-500" : "text-gray-500 hover:border-b-2 hover:border-blue-500 hover:text-blue-500")}>Ekipmanlar</button>
     </li>
     <li class="mr-2">
-        <button onClick={e=> selectedFeatureTab(3) }class={"inline-block  rounded-t-lg py-4 px-4 text-sm font-medium text-center"+ (featureTab ===  3 ? " text-blue-500 bg-white border-b-2 border-blue-500" : "text-gray-500 hover:border-b-2 hover:border-blue-500 hover:text-blue-500")}>Settings</button>
+        <button onClick={e=> selectedFeatureTab(3) }class={"inline-block  rounded-t-lg py-4 px-4 text-sm font-medium text-center"+ (featureTab ===  3 ? " text-blue-500 bg-white border-b-2 border-blue-500" : "text-gray-500 hover:border-b-2 hover:border-blue-500 hover:text-blue-500")}>Fotoğraflar</button>
     </li>
-    <li class="mr-2">
-        <button onClick={e=> selectedFeatureTab(4)} class={"inline-block  rounded-t-lg py-4 px-4 text-sm font-medium text-center"+ (featureTab ===  4 ? " text-blue-500 bg-white border-b-2 border-blue-500" : "text-gray-500 hover:border-b-2 hover:border-blue-500 hover:text-blue-500")}>Contacts</button>
-    </li>
+
 </ul>
-<div class="tab-content m-auto items-center max-w-fit pt-2" >
-  { featureTab === 1 ? <div class="tab-pane fade show active"  >
-    Tab 1 content
-  </div> : featureTab === 2 ? <div class="tab-pane fade">
+<div class="tab-content m-auto pt-2 " >
+  { featureTab === 1 ? 
+      <table className=" table-fixed m-auto w-full text-center">
+      <tr>
+          <td className=" w-1/4">Özellik 1</td>
+          <td className=" w-1/4"></td>
+          <td className=" w-1/4">Özellik 2</td>
+          <td className=" w-1/4"></td>
+       </tr>
+       <tr>
+          <td>Özellik 1</td>
+          <td></td>
+          <td>Özellik 2</td>
+          <td></td>
+       </tr>
+       <tr>
+          <td>Özellik 1</td>
+          <td></td>
+          <td>Özellik 2</td>
+          <td></td>
+       </tr>
+      </table>
+
+ : featureTab === 2 ? <div class="tab-pane fade">
     Tab 2 content
   </div> : featureTab === 3 ? <div class="tab-pane fade">
     Tab 3 content
-  </div>: featureTab === 4 ? <div class="tab-pane fade">
-    Tab 4 content
-  </div> : null}
+  </div>:null}
 </div>
         </div>
       </div>
