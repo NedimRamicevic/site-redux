@@ -79,26 +79,65 @@ function ProductContent({ product }) {
 </ul>
 <div class="tab-content m-auto pt-2 " >
   { featureTab === 1 ? 
-      <table className=" table-fixed m-auto w-full text-center">
-      <tr>
-          <td className=" w-1/4">Özellik 1</td>
-          <td className=" w-1/4"></td>
-          <td className=" w-1/4">Özellik 2</td>
-          <td className=" w-1/4"></td>
-       </tr>
-       <tr>
-          <td>Özellik 1</td>
-          <td></td>
-          <td>Özellik 2</td>
-          <td></td>
-       </tr>
-       <tr>
-          <td>Özellik 1</td>
-          <td></td>
-          <td>Özellik 2</td>
-          <td></td>
-       </tr>
-      </table>
+      <div className="table w-full space-y-4">
+        <div className="table-col flex text-start w-full">
+          <div className="w-1/4">
+            Özellik 1
+          </div>
+          <div className="w-1/4">
+            Özellik 
+          </div>
+          <div className="w-1/4">
+            Özellik 2
+          </div>
+          <div className="w-1/4">
+            Özellik 
+          </div>
+        </div>
+        <div className="table-col flex text-start w-full">
+          <div className="w-1/4">
+            Özellik 1
+          </div>
+          <div className="w-1/4">
+            Özellik 
+          </div>
+          <div className="w-1/4">
+            Özellik 2
+          </div>
+          <div className="w-1/4">
+            Özellik 
+          </div>
+        </div>
+        <div className="table-col flex text-start w-full">
+          <div className="w-1/4">
+            Özellik 1
+          </div>
+          <div className="w-1/4">
+            Özellik 
+          </div>
+          <div className="w-1/4">
+            Özellik 2
+          </div>
+          <div className="w-1/4">
+            Özellik 
+          </div>
+        </div>
+        <div className="table-col flex text-start w-full">
+          <div className="w-1/4">
+            Özellik 1
+          </div>
+          <div className="w-1/4">
+            Özellik 
+          </div>
+          <div className="w-1/4">
+            Özellik 2
+          </div>
+          <div className="w-1/4">
+            Özellik 
+          </div>
+        </div>
+        
+      </div>
 
  : featureTab === 2 ? <div class="tab-pane fade">
     Tab 2 content
