@@ -34,6 +34,28 @@ const categorySlice = createSlice({
           image:
             "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
           price: "$100",
+          photos: [
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+          ],
+          equipments: {
+            standard: [
+              "Kompakt",
+              "Sağlam",
+              "Hidrolik",
+              "Elektrik",
+              "Kısa Vibrasyon",
+            ],
+            optional: [
+              "Kompakt",
+              "Sağlam",
+              "Hidrolik",
+              "Elektrik",
+              "Kısa Vibrasyon",
+            ],
+          },
         },
         {
           id: 1,
@@ -42,6 +64,28 @@ const categorySlice = createSlice({
           image:
             "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
           price: "$100",
+          photos: [
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+          ],
+          equipments: {
+            standard: [
+              "Kompakt",
+              "Sağlam",
+              "Hidrolik",
+              "Elektrik",
+              "Kısa Vibrasyon",
+            ],
+            optional: [
+              "Kompakt",
+              "Sağlam",
+              "Hidrolik",
+              "Elektrik",
+              "Kısa Vibrasyon",
+            ],
+          },
         },
         {
           id: 1,
@@ -50,6 +94,28 @@ const categorySlice = createSlice({
           image:
             "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
           price: "$100",
+          photos: [
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+          ],
+          equipments: {
+            standard: [
+              "Kompakt",
+              "Sağlam",
+              "Hidrolik",
+              "Elektrik",
+              "Kısa Vibrasyon",
+            ],
+            optional: [
+              "Kompakt",
+              "Sağlam",
+              "Hidrolik",
+              "Elektrik",
+              "Kısa Vibrasyon",
+            ],
+          },
         },
         {
           id: 2,
@@ -57,7 +123,29 @@ const categorySlice = createSlice({
           description: "Microsoft",
           image:
             "https://tailus.io/sources/blocks/company-site/preview/images/clients/microsoft.svg",
-          price: "$200",
+          price: "$100",
+          photos: [
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+          ],
+          equipments: {
+            standard: [
+              "Kompakt",
+              "Sağlam",
+              "Hidrolik",
+              "Elektrik",
+              "Kısa Vibrasyon",
+            ],
+            optional: [
+              "Kompakt",
+              "Sağlam",
+              "Hidrolik",
+              "Elektrik",
+              "Kısa Vibrasyon",
+            ],
+          },
         },
       ],
     },
@@ -76,6 +164,28 @@ const categorySlice = createSlice({
             "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
 
           price: "$100",
+          photos: [
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+          ],
+          equipments: {
+            standard: [
+              "Kompakt",
+              "Sağlam",
+              "Hidrolik",
+              "Elektrik",
+              "Kısa Vibrasyon",
+            ],
+            optional: [
+              "Kompakt",
+              "Sağlam",
+              "Hidrolik",
+              "Elektrik",
+              "Kısa Vibrasyon",
+            ],
+          },
         },
         {
           id: 2,
@@ -84,7 +194,29 @@ const categorySlice = createSlice({
           description: "Microsoft",
           image:
             "https://tailus.io/sources/blocks/company-site/preview/images/clients/microsoft.svg",
-          price: "$200",
+          price: "$100",
+          photos: [
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+          ],
+          equipments: {
+            standard: [
+              "Kompakt",
+              "Sağlam",
+              "Hidrolik",
+              "Elektrik",
+              "Kısa Vibrasyon",
+            ],
+            optional: [
+              "Kompakt",
+              "Sağlam",
+              "Hidrolik",
+              "Elektrik",
+              "Kısa Vibrasyon",
+            ],
+          },
         },
       ],
     },

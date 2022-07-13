@@ -19,7 +19,7 @@ function ProductContent({ product }) {
       {productDescription()}
       </div>
       <div className="h-1/2">
-      {productFeatures()}
+      {productFeatures(productContent)}
       </div>
       
     </div>
@@ -61,7 +61,7 @@ function ProductContent({ product }) {
     );
   }
 
-  function productFeatures(){
+  function productFeatures(thisProduct){
     return(
       <div className=" m-auto max-w-5xl">
         <div className="p-12 items-center">
@@ -79,75 +79,104 @@ function ProductContent({ product }) {
 </ul>
 <div class="tab-content m-auto pt-2 " >
   { featureTab === 1 ? 
-      <div className="table w-full space-y-4">
-        <div className="table-col flex text-start w-full">
-          <div className="w-1/4">
-            Özellik 1
-          </div>
-          <div className="w-1/4">
-            Özellik 
-          </div>
-          <div className="w-1/4">
-            Özellik 2
-          </div>
-          <div className="w-1/4">
-            Özellik 
-          </div>
-        </div>
-        <div className="table-col flex text-start w-full">
-          <div className="w-1/4">
-            Özellik 1
-          </div>
-          <div className="w-1/4">
-            Özellik 
-          </div>
-          <div className="w-1/4">
-            Özellik 2
-          </div>
-          <div className="w-1/4">
-            Özellik 
-          </div>
-        </div>
-        <div className="table-col flex text-start w-full">
-          <div className="w-1/4">
-            Özellik 1
-          </div>
-          <div className="w-1/4">
-            Özellik 
-          </div>
-          <div className="w-1/4">
-            Özellik 2
-          </div>
-          <div className="w-1/4">
-            Özellik 
-          </div>
-        </div>
-        <div className="table-col flex text-start w-full">
-          <div className="w-1/4">
-            Özellik 1
-          </div>
-          <div className="w-1/4">
-            Özellik 
-          </div>
-          <div className="w-1/4">
-            Özellik 2
-          </div>
-          <div className="w-1/4">
-            Özellik 
-          </div>
-        </div>
-        
-      </div>
+      technicalFeatures(product)
 
- : featureTab === 2 ? <div class="tab-pane fade">
-    Tab 2 content
-  </div> : featureTab === 3 ? <div class="tab-pane fade">
-    Tab 3 content
-  </div>:null}
+ : featureTab === 2 ? 
+ equipments(product) : featureTab === 3 ? photos(product):null}
 </div>
         </div>
       </div>
     );
+
+    function photos(product) {
+      return <div class="tab-pane flex flex-wrap ">
+        {product.photos.map((photo, index) => {
+          return <div class="w-1/4  px-3">
+            <img class="w-full" src={photo} alt="product" />
+          </div>
+        }
+        )}
+      </div>;
+    }
+
+    function equipments(product) {
+      return <div class="tab-pane ">
+        <div className="standard-equipments">
+          <div className=" border-b-2 border-black max-w-fit my-2">Standard Equipments</div>
+          {product.equipments.standard.map(equipment =>
+            <div>{equipment}</div>
+            )}
+        </div>
+        <div className="optional-equipments">
+            <div className=" border-b-2 border-black max-w-fit my-2">Optional Equipments</div>
+            {product.equipments.standard.map(equipment =>
+            <div>{equipment}</div>
+            )}
+        </div>
+      </div>;
+    }
+
+    function technicalFeatures(product) {
+      return <div className="table w-full space-y-4">
+        <div className="table-col flex text-start w-full">
+          <div className="w-1/4">
+            Özellik 1
+          </div>
+          <div className="w-1/4">
+            Özellik
+          </div>
+          <div className="w-1/4">
+            Özellik 2
+          </div>
+          <div className="w-1/4">
+            Özellik
+          </div>
+        </div>
+        <div className="table-col flex text-start w-full">
+          <div className="w-1/4">
+            Özellik 1
+          </div>
+          <div className="w-1/4">
+            Özellik
+          </div>
+          <div className="w-1/4">
+            Özellik 2
+          </div>
+          <div className="w-1/4">
+            Özellik
+          </div>
+        </div>
+        <div className="table-col flex text-start w-full">
+          <div className="w-1/4">
+            Özellik 1
+          </div>
+          <div className="w-1/4">
+            Özellik
+          </div>
+          <div className="w-1/4">
+            Özellik 2
+          </div>
+          <div className="w-1/4">
+            Özellik
+          </div>
+        </div>
+        <div className="table-col flex text-start w-full">
+          <div className="w-1/4">
+            Özellik 1
+          </div>
+          <div className="w-1/4">
+            Özellik
+          </div>
+          <div className="w-1/4">
+            Özellik 2
+          </div>
+          <div className="w-1/4">
+            Özellik
+          </div>
+        </div>
+
+      </div>;
+    }
   }
 }
 
