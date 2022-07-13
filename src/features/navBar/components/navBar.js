@@ -109,7 +109,9 @@ function Navbar() {
           </div>
           <div class=" h-auto absolute left-full top-auto -mt-2 drop-shadow-xl bg-white">
             <ul class="group2Child top-0 min-w-max border-t-2 border-blue-400 divide-y-2 divide-blue ">
-              {category.products.map((product) => productMenuItem(product))}
+              {category.products.map((product) =>
+                productMenuItem(product, category)
+              )}
             </ul>
           </div>
         </li>
@@ -117,9 +119,9 @@ function Navbar() {
     );
   }
 
-  function productMenuItem(product) {
+  function productMenuItem(product, category) {
     return (
-      <Link to={"/products/" + product.name}>
+      <Link to={category.name + "/products/" + product.name}>
         <li class=" flex py-2 text-cyan-500 hover:text-white hover:bg-cyan-600">
           <div class=" w-full px-2 ">
             <button class=" cursor-pointer">{product.name}</button>

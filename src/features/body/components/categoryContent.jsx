@@ -30,15 +30,15 @@ function CategoryContent({ category }) {
       {categoryDescription()}
       <div className="category-content flex justify-center  gap-1 mx-auto w-2/4">
         {categoryContent.products.map(product => (
-        productItem(product)))}
+        productItem(product, categoryContent)))}
       </div>
       </div>
     ) :loading() 
   );
 
-  function productItem(product) {
+  function productItem(product,categoryContent) {
     return <div class="bg-white rounded-lg border cursor-pointer border-gray-200 shadow-md my-3 w-1/4"
-    onClick={() => navigate(`/products/${product.name}`)}
+    onClick={() => navigate(`/${categoryContent.name}/products/${product.name}`)}
     >
       <img class="rounded-t-lg mx-auto" src={product.image} alt="" />
       <div class="p-5">
