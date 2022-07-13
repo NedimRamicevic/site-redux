@@ -102,23 +102,23 @@ function ProductContent({ product }) {
     function equipments(product) {
       return <div class="tab-pane ">
         <div className="standard-equipments">
-          <div className=" border-b-2 border-black max-w-fit my-2">Standard Equipments</div>
+          <div className=" border-b-2 border-black max-w-fit my-2 font-bold font-sans">Standard Equipments</div>
           {product.equipments.standard.map(equipment =>
-            <div>{equipment}</div>
+            <div className=" font-serif">{equipment}</div>
             )}
         </div>
         <div className="optional-equipments">
-            <div className=" border-b-2 border-black max-w-fit my-2">Optional Equipments</div>
+            <div className=" border-b-2 border-black max-w-fit my-2 font-bold font-sans">Optional Equipments</div>
             {product.equipments.standard.map(equipment =>
-            <div>{equipment}</div>
+            <div className=" font-serif">{equipment}</div>
             )}
         </div>
       </div>;
     }
 
     function technicalFeatures(product) {
-      return <div className="table w-full space-y-4">
-        <div className="table-col flex text-start w-full">
+      return <div className="table w-full space-y-4 font-sans font-medium">
+        <div className="table-col flex text-start w-full ">
           <div className="w-1/4">
             Özellik 1
           </div>
