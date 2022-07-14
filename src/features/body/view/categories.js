@@ -19,7 +19,7 @@ function Categories() {
     return (
       <div
         class="bg-white rounded-lg border border-gray-200 shadow-md my-3 w-1/4 cursor-pointer"
-        onClick={() => navigate(`/categories/${category.name}`)}
+        onClick={() => navigate(`/categories/${category.id}`)}
       >
         <img class="rounded-t-lg mx-auto" src={category.image} alt="" />
         <div class="p-5">

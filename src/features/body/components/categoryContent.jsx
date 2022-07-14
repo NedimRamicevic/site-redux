@@ -38,7 +38,7 @@ function CategoryContent({ category }) {
 
   function productItem(product,categoryContent) {
     return <div class="bg-white rounded-lg border cursor-pointer border-gray-200 shadow-md my-3 w-1/4"
-    onClick={() => navigate(`/${categoryContent.name}/products/${product.name}`)}
+    onClick={() => navigate(`/products/${product.name}`)}
     >
       <img class="rounded-t-lg mx-auto" src={product.image} alt="" />
       <div class="p-5">

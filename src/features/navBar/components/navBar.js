@@ -102,7 +102,7 @@ function Navbar() {
 
   function categoryMenuItem(category) {
     return (
-      <Link to={"/categories/" + category.name}>
+      <Link to={"/categories/" + category.id}>
         <li class="group2 flex py-2 hover:bg-cyan-600 text-cyan-500 hover:text-white">
           <div class=" w-full px-2 ">
             <button class="  cursor-pointer ">{category.name}</button>
@@ -121,7 +121,7 @@ function Navbar() {
 
   function productMenuItem(product, category) {
     return (
-      <Link to={category.name + "/products/" + product.name}>
+      <Link to={"/products/" + product.name}>
         <li class=" flex py-2 text-cyan-500 hover:text-white hover:bg-cyan-600">
           <div class=" w-full px-2 ">
             <button class=" cursor-pointer">{product.name}</button>

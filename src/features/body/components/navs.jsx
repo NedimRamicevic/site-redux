@@ -29,13 +29,13 @@ function Navs() {
       {categories.map((category) => (
         <Route
           exact
-          path={"/categories/" + category.name}
+          path={"/categories/" + category.id}
           element={<CategoryContent category={category} />}
         />
       ))}
         {categories.map((category) => {
           return (
-            <Route path={category.name + "/products"} element={<Product product={category.products} />} >
+            <Route path={ "/products"} element={<Product product={category.products} />} >
             {category.products.map((product) => (
             <Route
               exact

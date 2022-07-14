@@ -21,7 +21,7 @@ const categorySlice = createSlice({
   initialState: [
     {
       id: 1,
-      name: "WebDevelopment",
+      name: "Blok Makineleri",
       description: "Web Development",
       image:
         "https://www.presmakina.com/presmakina/urun/betonblok/pro295/home.jpg",
@@ -151,7 +151,291 @@ const categorySlice = createSlice({
     },
     {
       id: 2,
-      name: "MobileDevelopment",
+      name: "Karıştırma Sistemleri",
+      description: "Mobile Development",
+      image:
+        "https://www.presmakina.com/presmakina/urun/betonblok/pro100/home.jpg",
+      products: [
+        {
+          id: 1,
+          name: "Apple",
+          description: "Apple",
+          image:
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+
+          price: "$100",
+          photos: [
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+          ],
+          equipments: {
+            standard: [
+              "Kompakt",
+              "Sağlam",
+              "Hidrolik",
+              "Elektrik",
+              "Kısa Vibrasyon",
+            ],
+            optional: [
+              "Kompakt",
+              "Sağlam",
+              "Hidrolik",
+              "Elektrik",
+              "Kısa Vibrasyon",
+            ],
+          },
+        },
+        {
+          id: 2,
+          name: "Microsoft",
+
+          description: "Microsoft",
+          image:
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/microsoft.svg",
+          price: "$100",
+          photos: [
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+          ],
+          equipments: {
+            standard: [
+              "Kompakt",
+              "Sağlam",
+              "Hidrolik",
+              "Elektrik",
+              "Kısa Vibrasyon",
+            ],
+            optional: [
+              "Kompakt",
+              "Sağlam",
+              "Hidrolik",
+              "Elektrik",
+              "Kısa Vibrasyon",
+            ],
+          },
+        },
+      ],
+    },
+    {
+      id: 3,
+      name: "Taşıma Sistemleri",
+      description: "Mobile Development",
+      image:
+        "https://www.presmakina.com/presmakina/urun/betonblok/pro100/home.jpg",
+      products: [
+        {
+          id: 1,
+          name: "Apple",
+          description: "Apple",
+          image:
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+
+          price: "$100",
+          photos: [
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+          ],
+          equipments: {
+            standard: [
+              "Kompakt",
+              "Sağlam",
+              "Hidrolik",
+              "Elektrik",
+              "Kısa Vibrasyon",
+            ],
+            optional: [
+              "Kompakt",
+              "Sağlam",
+              "Hidrolik",
+              "Elektrik",
+              "Kısa Vibrasyon",
+            ],
+          },
+        },
+        {
+          id: 2,
+          name: "Microsoft",
+
+          description: "Microsoft",
+          image:
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/microsoft.svg",
+          price: "$100",
+          photos: [
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+          ],
+          equipments: {
+            standard: [
+              "Kompakt",
+              "Sağlam",
+              "Hidrolik",
+              "Elektrik",
+              "Kısa Vibrasyon",
+            ],
+            optional: [
+              "Kompakt",
+              "Sağlam",
+              "Hidrolik",
+              "Elektrik",
+              "Kısa Vibrasyon",
+            ],
+          },
+        },
+      ],
+    },
+    {
+      id: 4,
+      name: "Kalıplar",
+      description: "Mobile Development",
+      image:
+        "https://www.presmakina.com/presmakina/urun/betonblok/pro100/home.jpg",
+      products: [
+        {
+          id: 1,
+          name: "Apple",
+          description: "Apple",
+          image:
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+
+          price: "$100",
+          photos: [
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+          ],
+          equipments: {
+            standard: [
+              "Kompakt",
+              "Sağlam",
+              "Hidrolik",
+              "Elektrik",
+              "Kısa Vibrasyon",
+            ],
+            optional: [
+              "Kompakt",
+              "Sağlam",
+              "Hidrolik",
+              "Elektrik",
+              "Kısa Vibrasyon",
+            ],
+          },
+        },
+        {
+          id: 2,
+          name: "Microsoft",
+
+          description: "Microsoft",
+          image:
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/microsoft.svg",
+          price: "$100",
+          photos: [
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+          ],
+          equipments: {
+            standard: [
+              "Kompakt",
+              "Sağlam",
+              "Hidrolik",
+              "Elektrik",
+              "Kısa Vibrasyon",
+            ],
+            optional: [
+              "Kompakt",
+              "Sağlam",
+              "Hidrolik",
+              "Elektrik",
+              "Kısa Vibrasyon",
+            ],
+          },
+        },
+      ],
+    },
+    {
+      id: 6,
+      name: "Paletler",
+      description: "Mobile Development",
+      image:
+        "https://www.presmakina.com/presmakina/urun/betonblok/pro100/home.jpg",
+      products: [
+        {
+          id: 1,
+          name: "Apple",
+          description: "Apple",
+          image:
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+
+          price: "$100",
+          photos: [
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+          ],
+          equipments: {
+            standard: [
+              "Kompakt",
+              "Sağlam",
+              "Hidrolik",
+              "Elektrik",
+              "Kısa Vibrasyon",
+            ],
+            optional: [
+              "Kompakt",
+              "Sağlam",
+              "Hidrolik",
+              "Elektrik",
+              "Kısa Vibrasyon",
+            ],
+          },
+        },
+        {
+          id: 2,
+          name: "Microsoft",
+
+          description: "Microsoft",
+          image:
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/microsoft.svg",
+          price: "$100",
+          photos: [
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+          ],
+          equipments: {
+            standard: [
+              "Kompakt",
+              "Sağlam",
+              "Hidrolik",
+              "Elektrik",
+              "Kısa Vibrasyon",
+            ],
+            optional: [
+              "Kompakt",
+              "Sağlam",
+              "Hidrolik",
+              "Elektrik",
+              "Kısa Vibrasyon",
+            ],
+          },
+        },
+      ],
+    },
+    {
+      id: 5,
+      name: "Taş Modelleri",
       description: "Mobile Development",
       image:
         "https://www.presmakina.com/presmakina/urun/betonblok/pro100/home.jpg",
