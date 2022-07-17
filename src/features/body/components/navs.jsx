@@ -60,7 +60,7 @@ function Navs() {
       >
         <Route path="addProduct" element={<AddProduct />} />
         <Route path="addCategory" element={<AddCategory />} />
-        <Route path="categoryList" element={<ItemList/>} />
+        <Route path="categoryList" element={<ItemList categories={categories}/>} />
       </Route>
 
       <Route exact path="/login" element={<Login />} />

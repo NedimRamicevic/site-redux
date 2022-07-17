@@ -58,67 +58,67 @@ const categorySlice = createSlice({
           },
         },
         {
-          id: 1,
-          name: "Apple",
-          description: "Apple",
-          image:
-            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
-          price: "$100",
-          photos: [
-            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
-            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
-            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
-            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
-          ],
-          equipments: {
-            standard: [
-              "Kompakt",
-              "Sağlam",
-              "Hidrolik",
-              "Elektrik",
-              "Kısa Vibrasyon",
-            ],
-            optional: [
-              "Kompakt",
-              "Sağlam",
-              "Hidrolik",
-              "Elektrik",
-              "Kısa Vibrasyon",
-            ],
-          },
-        },
-        {
-          id: 1,
-          name: "Apple",
-          description: "Apple",
-          image:
-            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
-          price: "$100",
-          photos: [
-            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
-            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
-            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
-            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
-          ],
-          equipments: {
-            standard: [
-              "Kompakt",
-              "Sağlam",
-              "Hidrolik",
-              "Elektrik",
-              "Kısa Vibrasyon",
-            ],
-            optional: [
-              "Kompakt",
-              "Sağlam",
-              "Hidrolik",
-              "Elektrik",
-              "Kısa Vibrasyon",
-            ],
-          },
-        },
-        {
           id: 2,
+          name: "Apple",
+          description: "Apple",
+          image:
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+          price: "$100",
+          photos: [
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+          ],
+          equipments: {
+            standard: [
+              "Kompakt",
+              "Sağlam",
+              "Hidrolik",
+              "Elektrik",
+              "Kısa Vibrasyon",
+            ],
+            optional: [
+              "Kompakt",
+              "Sağlam",
+              "Hidrolik",
+              "Elektrik",
+              "Kısa Vibrasyon",
+            ],
+          },
+        },
+        {
+          id: 3,
+          name: "Apple",
+          description: "Apple",
+          image:
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+          price: "$100",
+          photos: [
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+            "https://tailus.io/sources/blocks/company-site/preview/images/clients/airbnb.svg",
+          ],
+          equipments: {
+            standard: [
+              "Kompakt",
+              "Sağlam",
+              "Hidrolik",
+              "Elektrik",
+              "Kısa Vibrasyon",
+            ],
+            optional: [
+              "Kompakt",
+              "Sağlam",
+              "Hidrolik",
+              "Elektrik",
+              "Kısa Vibrasyon",
+            ],
+          },
+        },
+        {
+          id: 4,
           name: "Microsoft",
           description: "Microsoft",
           image:

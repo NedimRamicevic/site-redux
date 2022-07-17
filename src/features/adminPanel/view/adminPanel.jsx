@@ -11,7 +11,7 @@ function AdminDashboard() {
         <div className='sideBar col-span1'>
             <SideBar />
         </div>
-        <div className="p-12 col-span-6 self-center">
+        <div className="p-12 col-span-6 m-auto w-2/3 self-center">
             <Outlet />
         </div>
     </div>
