@@ -529,7 +529,8 @@ const categorySlice = createSlice({
       });
     },
     removeCategory: (state, action) => {
-      state.splice(action.payload, 1);
+      state = state.filter((category) => category.id !== action.payload);
+      return state;
     },
     updateCategory: (state, action) => {
       state[action.payload.index] = action.payload.category;
@@ -550,7 +551,14 @@ const categorySlice = createSlice({
       });
     },
     removeProductfromCategory: (state, action) => {
-      state[action.payload.index].products.splice(action.payload.product, 1);
+      state = state.map((category) => {
+        if (category.name === action.payload.name) {
+          category.products = category.products.filter(
+            (product) => product.id !== action.payload.id
+          );
+        }
+        return state;
+      });
     },
   },
 });

@@ -6,10 +6,16 @@ import { removeCategory, removeProductfromCategory } from "../redux/categorySlic
 
 function ItemList({categories}) {
     const [items, setItems] = useState(categories[0].products)
+    const [category, setCategory] = useState(categories[0].name)
     const [isClicked, setIsClicked] = useState(true)
     const dispatch = useDispatch();
 
-        
+    const onCategoryDeleteClick =  (id) =>{
+        dispatch(removeCategory(id))
+    }
+    const onProductDeleteClick =  (id) =>{
+        dispatch(removeProductfromCategory({id, category}))
+    }
   return (
 <div class="max-w-2xl items-center justify-center flex gap-10">
 
@@ -23,8 +29,8 @@ function ItemList({categories}) {
    <div class="flow-root">
         <ul class="divide-y divide-gray-200 dark:divide-gray-700 cursor-pointer">
             {categories.map(item => (
-                <li key={item.id} class="py-3 sm:py-4" onClick={()=>{setItems(item.products); setIsClicked(true)} }>
-                {listTile(item)}
+                <li key={item.id} class="py-3 sm:py-4" onClick={()=>{setItems(item.products); setCategory(item.name)} }>
+                {listTile(item,()=>onCategoryDeleteClick(item.id))}
             </li>
             ))}
         </ul>
@@ -41,7 +47,7 @@ function ItemList({categories}) {
         <ul class="divide-y divide-gray-200 dark:divide-gray-700 cursor-pointer">
             {items.map(item => (
                 <li key={item.id} class="py-3 sm:py-4">
-                {listTile(item)}
+                {listTile(item, ()=>onProductDeleteClick(item.id))}
             </li>
             ))}
         </ul>
@@ -58,12 +64,12 @@ function ItemList({categories}) {
 
 export default ItemList
 
-function listTile(item) {
+function listTile(item, onCategoryDeleteClick) {
     return <div class="flex items-center space-x-4">
         <div class="flex-shrink-0">
             <img class="w-8 h-8 rounded-full" src={item.image} alt="" />
         </div>
-        <div class="flex-1 min-w-0">
+        <div class="flex-1 min-w-0" >
             <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
                 {item.name}
             </p>
@@ -72,7 +78,7 @@ function listTile(item) {
             </p>
         </div>
         <div class="flex-shrink-0">
-            <button class="text-sm font-medium text-red-700 focus:outline-none focus:shadow-outline-blue-300">
+            <button class="text-sm font-medium text-red-700 focus:outline-none focus:shadow-outline-blue-300" onClick={onCategoryDeleteClick}>
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 	  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
 	</svg>
