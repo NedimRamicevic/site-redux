@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { addProducttoCategory } from "../redux/categorySlice";
+import { Dropdown } from "./dropdown";
 
 function AddProduct() {
   const [content, setContent] = useState("");
@@ -73,23 +74,4 @@ function AddProduct() {
     </div>
   );
 }
-const Dropdown = ({ value, options, onChange }) => {
-  return (
-    <div class="form-item">
-      <select
-        placeholder="Select Category"
-        className="appearance-none w-full bg-white bg-clip-padding rounded m-0 focus:outline-none
-          transition
-          ease-in-out"
-        value={value}
-        onChange={onChange}
-      >
-        {options.map((option) => (
-          <option value={option.name}>{option.name}</option>
-        ))}
-      </select>
-    </div>
-  );
-};
-
 export default AddProduct;

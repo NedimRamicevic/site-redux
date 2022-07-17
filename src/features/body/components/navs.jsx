@@ -13,6 +13,7 @@ import Product from "../view/product";
 import Categories from "../view/categories";
 import AddProduct from "../../adminPanel/components/addProduct";
 import AddCategory from "../../adminPanel/components/addCategory";
+import ItemList from "../../adminPanel/components/itemList";
 
 function Navs() {
   const categories = useSelector((state) => state.categories).map(
@@ -59,6 +60,7 @@ function Navs() {
       >
         <Route path="addProduct" element={<AddProduct />} />
         <Route path="addCategory" element={<AddCategory />} />
+        <Route path="categoryList" element={<ItemList/>} />
       </Route>
 
       <Route exact path="/login" element={<Login />} />
