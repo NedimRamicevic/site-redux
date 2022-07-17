@@ -551,11 +551,13 @@ const categorySlice = createSlice({
       });
     },
     removeProductfromCategory: (state, action) => {
+      console.log(action.payload.category);
       state = state.map((category) => {
-        if (category.name === action.payload.name) {
+        if (category.name === action.payload.category) {
           category.products = category.products.filter(
             (product) => product.id !== action.payload.id
           );
+          console.log(category.products);
         }
         return state;
       });
